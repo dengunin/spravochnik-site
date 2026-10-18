@@ -1,0 +1,4224 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://dengunin.github.io/spravochnik-site/endokrinologiya/endokrinologiya-nadpochechnikovaya-nedostatochnost/" rel="canonical"/>
+<link href="../endokrinologiya-nadpochechnikovaya-nedostatochnost-klinika/" rel="prev"/>
+<link href="../endokrinologiya-nediabeticheskaya-gipoglikemiya/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Надпочечниковая недостаточность: диагностика, заместительная терапия, стресс-дозы - Справочник терапевта</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="noindex, nofollow" name="robots"/>
+<script>
+  /* Поиск по зашифрованным страницам: encryptcontent (search_index: dynamically) кладёт текст страниц
+     в search/encrypted_search_index.json, зашифрованный ключом страницы. Перехватываем загрузку индекса
+     темой Material (XMLHttpRequest) и добавляем в него расшифрованные записи, когда ключ уже есть в sessionStorage. */
+  (function () {
+    var ecDone = false, builtWithoutKeys = false, ecIds = [];
+    function hasKeys(ids) { return ids.length > 0 && ids.every(function (id) { return sessionStorage.getItem(id); }); }
+    window.addEventListener("encryptcontent_event", function () {
+      ecDone = true;
+      if (builtWithoutKeys && hasKeys(ecIds)) location.reload();
+    });
+    function waitDecrypt() {
+      return new Promise(function (res) {
+        if (ecDone) return res();
+        window.addEventListener("encryptcontent_event", function () { res(); }, { once: true });
+        setTimeout(res, 8000);
+      });
+    }
+    function hex(h) { return new Uint8Array(h.match(/../g).map(function (b) { return parseInt(b, 16); })); }
+    function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+    async function decrypt(keyHex, bundle) {
+      var p = bundle.split(";");
+      var key = await crypto.subtle.importKey("raw", hex(keyHex), "AES-CBC", false, ["decrypt"]);
+      var plain = await crypto.subtle.decrypt({ name: "AES-CBC", iv: b64(p[0]) }, key, b64(p[1]));
+      return JSON.parse(new TextDecoder().decode(plain));
+    }
+    async function buildIndex(url) {
+      var index = await (await fetch(url)).json();
+      try {
+        var enc = await (await fetch(url.replace("search_index.json", "encrypted_search_index.json"))).json();
+        ecIds = Object.keys(enc);
+        if (!hasKeys(ecIds)) await waitDecrypt();
+        var added = 0;
+        for (var i = 0; i < ecIds.length; i++) {
+          var k = sessionStorage.getItem(ecIds[i]);
+          if (!k) continue;
+          try { index.docs.push.apply(index.docs, await decrypt(k, enc[ecIds[i]])); added++; } catch (e) {}
+        }
+        builtWithoutKeys = ecIds.length > 0 && added === 0;
+      } catch (e) {}
+      return JSON.stringify(index);
+    }
+    var xOpen = XMLHttpRequest.prototype.open, xSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.open = function (method, url) {
+      this.__ecUrl = /search\/search_index\.json(\?|$)/.test(String(url)) ? new URL(url, location.href).href : null;
+      return xOpen.apply(this, arguments);
+    };
+    XMLHttpRequest.prototype.send = function () {
+      var x = this, url = x.__ecUrl;
+      if (!url) return xSend.apply(x, arguments);
+      var rt = x.responseType;
+      function go(target) { xOpen.call(x, "GET", target); x.responseType = rt; xSend.call(x); }
+      buildIndex(url).then(function (json) {
+        go(URL.createObjectURL(new Blob([json], { type: "application/json" })));
+      }, function () { go(url); });
+    };
+  })();
+  </script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#-">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="Справочник терапевта" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Справочник терапевта
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Надпочечниковая недостаточность: диагностика, заместительная терапия, стресс-дозы
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="teal" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Вкладки" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dietologiya/">
+          
+  
+  
+    
+  
+  Диетология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pulmonologiya/">
+          
+  
+  
+    
+  
+  Пульмонология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../urologiya/">
+          
+  
+  
+    
+  
+  Урология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../kirurgiya/">
+          
+  
+  
+    
+  
+  Хирургия
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
+          
+  
+  
+    
+  
+  Эндокринология
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Справочник терапевта" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Справочник терапевта
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../dietologiya/">
+<span class="md-ellipsis">
+    
+  
+    Диетология
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Диетология
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-dash-dieta/">
+<span class="md-ellipsis">
+    
+  
+    DASH-диета: порции и снижение натрия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-allergiya-na-arakhis/">
+<span class="md-ellipsis">
+    
+  
+    Аллергия на арахис: чего избегать, этикетки, перекрёстное заражение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-abkm-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Аллергия на белок коровьего молока: красные флаги, диагностика, диетическое лечение (для врача)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-abkm-patsientam/">
+<span class="md-ellipsis">
+    
+  
+    Аллергия на белок коровьего молока: рекомендации для пациентов
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-abkm-techenie/">
+<span class="md-ellipsis">
+    
+  
+    Аллергия на белок коровьего молока: тяжесть симптомов и течение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-allergiya-na-rybu/">
+<span class="md-ellipsis">
+    
+  
+    Аллергия на рыбу: рекомендации для пациентов
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-beremennost-pitanie/">
+<span class="md-ellipsis">
+    
+  
+    Беременность: основы здорового питания и пищевая безопасность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-beremennost-pribavka-vesa/">
+<span class="md-ellipsis">
+    
+  
+    Беременность: прибавка массы тела и КБЖУ
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-beremennost-dobavki/">
+<span class="md-ellipsis">
+    
+  
+    Беременность: фолиевая кислота, йод, витамин D, кальций, железо
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-zhkb-bessimptomnaya-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Бессимптомная желчнокаменная болезнь: диета
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-bioimpedansometriya/">
+<span class="md-ellipsis">
+    
+  
+    Биоимпедансометрия: интерпретация и наложение электродов
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-varfarin-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Варфарин и питание: витамин K, взаимодействия с продуктами и БАД
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-vegetarianstvo-nutrienty/">
+<span class="md-ellipsis">
+    
+  
+    Вегетарианская диета: риски дефицитов (белок, железо, B12, кальций, йод) и рекомендации
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-vegetarianstvo/">
+<span class="md-ellipsis">
+    
+  
+    Вегетарианство: виды диет и влияние на здоровье
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-vitamin-a-obshchee/">
+<span class="md-ellipsis">
+    
+  
+    Витамин A: источники, метаболизм, потребность, причины дефицита
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-defitsit-vitamina-d/">
+<span class="md-ellipsis">
+    
+  
+    Витамин D: диагностика дефицита, нормы, группы риска, профилактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-vitamin-d-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Витамин D: лечебные дозы, беременность и лактация
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-vzk-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Воспалительные заболевания кишечника: питание в обострении и ремиссии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-gastroparez-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Гастропарез: диета
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-gsd-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Гестационный сахарный диабет: диета и физическая нагрузка
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-gsd-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Гестационный сахарный диабет: патогенез и диагностика (ПГТТ)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-grudnoe-vskarmlivanie/">
+<span class="md-ellipsis">
+    
+  
+    Грудное вскармливание: питание кормящей, добавки, аллергия у младенца
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-gerb-dieta/">
+<span class="md-ellipsis">
+    
+  
+    ГЭРБ: рекомендации по питанию и образу жизни
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-defitsit-vitamina-a/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит витамина A: клиника, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-defitsit-b12/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит витамина B12: группы риска, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-defitsit-vitamina-e/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит витамина E: причины, клиника, лечение, профилактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-defitsit-zheleza/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит железа: диагностика, нормы, источники, всасывание
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-defitsit-kaltsiya/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит кальция: группы риска и коррекция
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-defitsit-folievoi-kisloty/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит фолиевой кислоты: причины, диагностика, потребность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-defitsit-tsinka/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит цинка: группы риска, клиника, диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-dieta-ss-risk/">
+<span class="md-ellipsis">
+    
+  
+    Диета для первичной профилактики сердечно-сосудистых заболеваний
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-dislipidemiya-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Диета при дислипидемии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-nizkii-glikemicheskii-indeks/">
+<span class="md-ellipsis">
+    
+  
+    Диета с низким гликемическим индексом: ГИ и гликемическая нагрузка
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-zapor-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Запор: диета с пищевыми волокнами
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-insulinorezistentnost/">
+<span class="md-ellipsis">
+    
+  
+    Инсулинорезистентность: диета
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-keto-dieta-metodika/">
+<span class="md-ellipsis">
+    
+  
+    Кетогенная диета: методика, наблюдение, прекращение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-keto-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Кетогенная диета: показания, противопоказания, побочные эффекты
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-laktaznaya-nedostatochnost/">
+<span class="md-ellipsis">
+    
+  
+    Лактазная недостаточность: диагностика и диета
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-maslo-perechnoi-myaty/">
+<span class="md-ellipsis">
+    
+  
+    Масло перечной мяты при СРК
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-mna/">
+<span class="md-ellipsis">
+    
+  
+    Мини-оценка питания (MNA и MNA-SF) у пожилых
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-mkb-dieta-nutrienty/">
+<span class="md-ellipsis">
+    
+  
+    Мочекаменная болезнь: натрий, белок, кальций, витамин C, кофеин, сахара
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-mkb-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Мочекаменная болезнь: питание (жидкость, цитрат)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-nazhbp-dieta/">
+<span class="md-ellipsis">
+    
+  
+    НАЖБП: диета для снижения веса (метод тарелки)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-nedostatochnost-pitaniya-glim/">
+<span class="md-ellipsis">
+    
+  
+    Недостаточность питания: диагностика по критериям GLIM
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-nedostatochnost-pitaniya-anamnez/">
+<span class="md-ellipsis">
+    
+  
+    Недостаточность питания: сбор анамнеза и лабораторная диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-paleo-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Палео-диета: основы, доказательства, риски
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-rak-zheludka-posle-operatsii/">
+<span class="md-ellipsis">
+    
+  
+    Питание после операции на желудке, профилактика демпинг-синдрома
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-rpp-plan-pitaniya/">
+<span class="md-ellipsis">
+    
+  
+    План питания при расстройствах пищевого поведения (правило трёх)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-podagra-vrachu/">
+<span class="md-ellipsis">
+    
+  
+    Подагра: диета и ведение (для врача, BSR 2017, КР 2025)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-podagra-patsientu/">
+<span class="md-ellipsis">
+    
+  
+    Подагра: низкопуриновая диета (рекомендации для пациентов)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-rabota-s-pereedaniem/">
+<span class="md-ellipsis">
+    
+  
+    Работа с перееданием
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-rak-zheludka-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Рак желудка: питание до операции и на фоне химиотерапии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-sd2-makronutrienty/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет 2 типа: макронутриенты, сахарозаменители, активность, медикаментозное снижение веса
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-sd2-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет 2 типа: снижение веса и выбор диеты
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-srk-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Синдром раздражённого кишечника: диета (Low FODMAP, безглютеновая)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-skrining-nrs-2002/">
+<span class="md-ellipsis">
+    
+  
+    Скрининг пищевых рисков NRS-2002
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-sredizemnomorskaya-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Средиземноморская диета
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-struktura-konsultatsii/">
+<span class="md-ellipsis">
+    
+  
+    Структура консультации диетолога: дневник питания, самоконтроль, поведенческие стратегии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-skrining-must/">
+<span class="md-ellipsis">
+    
+  
+    Универсальный инструмент скрининга недоедания (MUST)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-khbp-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Хроническая болезнь почек: диета при ХБП 3 и 4–5 стадии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-khronicheskii-pankreatit-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Хронический панкреатит: питание и коррекция недостаточности
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-tseliakiya-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Целиакия: безглютеновая диета, правила соблюдения
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dietologiya/dietologiya-tseliakiya-produkty/">
+<span class="md-ellipsis">
+    
+  
+    Целиакия: разрешённые и запрещённые продукты по группам
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../pulmonologiya/">
+<span class="md-ellipsis">
+    
+  
+    Пульмонология
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Пульмонология
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-aspergillez/">
+<span class="md-ellipsis">
+    
+  
+    Аспергиллёз (АБЛА): клиника, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-aspiratsionnaya-pnevmoniya/">
+<span class="md-ellipsis">
+    
+  
+    Аспирационная внебольничная пневмония
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-bronkhialnaya-astma-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Бронхиальная астма кратко: критерии, обследования, мифы, важные комментарии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-bronkhialnaya-astma-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Бронхиальная астма: диагностика, триггеры, оценка тяжести обострения
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-bronkhialnaya-astma-tyazhest/">
+<span class="md-ellipsis">
+    
+  
+    Бронхиальная астма: классификация по степени тяжести
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-bronkhialnaya-astma-stupeni/">
+<span class="md-ellipsis">
+    
+  
+    Бронхиальная астма: классы препаратов и ступени 1–3
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-bronkhialnaya-astma-kontrol/">
+<span class="md-ellipsis">
+    
+  
+    Бронхиальная астма: оценка контроля и тактика (ступень вверх/вниз)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-bronkhialnaya-astma-preparaty/">
+<span class="md-ellipsis">
+    
+  
+    Бронхиальная астма: препараты и ингаляторы (ИГКС, ИГКС+ДДБА, тройные)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-bronkhialnaya-astma-stupeni-4-6/">
+<span class="md-ellipsis">
+    
+  
+    Бронхиальная астма: ступени 4–6, биологическая терапия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-vnebolnichnaya-pnevmoniya/">
+<span class="md-ellipsis">
+    
+  
+    Внебольничная пневмония: критерии диагноза, CRB-65, амбулаторное лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-vnutribolnichnaya-pnevmoniya/">
+<span class="md-ellipsis">
+    
+  
+    Внутрибольничная (нозокомиальная) пневмония
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-izl-klinika-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Интерстициальные заболевания лёгких: клиника, диагностика, лечение, прогноз
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-izl-etiologiya/">
+<span class="md-ellipsis">
+    
+  
+    Интерстициальные заболевания лёгких: определение и этиология
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-kashel/">
+<span class="md-ellipsis">
+    
+  
+    Кашель: красные флаги и классификация
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-koklyush/">
+<span class="md-ellipsis">
+    
+  
+    Коклюш у взрослых: клиника, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-krovokharkane/">
+<span class="md-ellipsis">
+    
+  
+    Кровохарканье: красные флаги и общая информация
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-kt-ogk/">
+<span class="md-ellipsis">
+    
+  
+    КТ органов грудной клетки: виды, вторичная долька, показания
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-odyshka/">
+<span class="md-ellipsis">
+    
+  
+    Одышка: красные флаги, причины, типы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-ostryi-bronkhit-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Острый бронхит: лечение кашля, когда не нужны антибиотики
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-ostryi-bronkhit/">
+<span class="md-ellipsis">
+    
+  
+    Острый бронхит: этиология, клиника, диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-otkaz-ot-kureniya/">
+<span class="md-ellipsis">
+    
+  
+    Отказ от курения: консультирование и тест Фагерстрема
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-otkaz-ot-kureniya-farmakoterapiya/">
+<span class="md-ellipsis">
+    
+  
+    Отказ от курения: медикаментозная терапия (НЗТ, варениклин, цитизин)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-pnevmoniya-klassifikatsiya/">
+<span class="md-ellipsis">
+    
+  
+    Пневмония: классификация, клиника типичной и атипичной, диагностика, антибактериальные препараты
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-pnevmoniya-anamnez/">
+<span class="md-ellipsis">
+    
+  
+    Пневмония: красные флаги, CRB-65, чек-лист сбора анамнеза
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-rak-gortanoglotki/">
+<span class="md-ellipsis">
+    
+  
+    Рак гортаноглотки: симптомы, диагностика, маршрутизация
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-rak-legkogo/">
+<span class="md-ellipsis">
+    
+  
+    Рак лёгкого: красные флаги и диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-rentgenografiya-osnovy/">
+<span class="md-ellipsis">
+    
+  
+    Рентгенография грудной клетки: критерии качественного снимка и анатомия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-rentgen-emfizema/">
+<span class="md-ellipsis">
+    
+  
+    Рентгенография: синдром повышенной воздушности (эмфизема)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-rentgen-polost/">
+<span class="md-ellipsis">
+    
+  
+    Рентгенография: синдром полости в лёгком (CAVITY)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-rentgen-konsolidatsiya/">
+<span class="md-ellipsis">
+    
+  
+    Рентгенография: синдром уплотнения лёгочной ткани (консолидация, ателектаз)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-sarkoidoz/">
+<span class="md-ellipsis">
+    
+  
+    Саркоидоз: клиника, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-soas/">
+<span class="md-ellipsis">
+    
+  
+    Синдром обструктивного апноэ сна (СОАС)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-ochagi-v-legkikh-fleischner/">
+<span class="md-ellipsis">
+    
+  
+    Солидные очаги (узелки) в лёгких на КТ: тактика наблюдения по Fleischner
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-spirografiya/">
+<span class="md-ellipsis">
+    
+  
+    Спирография: интерпретация (алгоритм из 5 шагов)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-ochagi-v-legkikh-subsolidnye/">
+<span class="md-ellipsis">
+    
+  
+    Субсолидные очаги в лёгких (матовое стекло) и стратификация риска по Fleischner
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-tuberkulez-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Туберкулёз кратко: критерии, обследования, терапия, мифы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-tuberkulez/">
+<span class="md-ellipsis">
+    
+  
+    Туберкулёз: латентная и активная форма, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-tela-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    ТЭЛА: YEARS, Женевская шкала, PERC, D-димер, КТ-ангиография
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-tela-klinika/">
+<span class="md-ellipsis">
+    
+  
+    ТЭЛА: клиника, факторы риска, оценка вероятности
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-khobl-kratko/">
+<span class="md-ellipsis">
+    
+  
+    ХОБЛ кратко: критерии диагноза, обострение, антибиотики, что снижает летальность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-khobl-oslozhneniya/">
+<span class="md-ellipsis">
+    
+  
+    ХОБЛ: инфекция, ограничение воздушного потока, осложнения
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-khobl-lekarstvennaya-terapiya/">
+<span class="md-ellipsis">
+    
+  
+    ХОБЛ: лекарственные препараты и неотложная помощь при обострении
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-khobl-simptomy-gruppy-abe/">
+<span class="md-ellipsis">
+    
+  
+    ХОБЛ: симптомы и начальная терапия по группам A, B, E (GOLD)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pulmonologiya/pulmonologiya-khobl-etiologiya-patofiziologiya/">
+<span class="md-ellipsis">
+    
+  
+    ХОБЛ: этиология и патофизиология
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../urologiya/">
+<span class="md-ellipsis">
+    
+  
+    Урология
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Урология
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-anogenitalnyi-gerpes/">
+<span class="md-ellipsis">
+    
+  
+    Аногенитальная герпетическая инфекция: формы, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-balanopostit/">
+<span class="md-ellipsis">
+    
+  
+    Баланопостит и баланит
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-bessimptomnaya-bakteriuriya/">
+<span class="md-ellipsis">
+    
+  
+    Бессимптомная бактериурия: когда лечить, а когда нет
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-bolezn-peironi-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Болезнь Пейрони: консервативное и хирургическое лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-bolezn-peironi/">
+<span class="md-ellipsis">
+    
+  
+    Болезнь Пейрони: фазы и диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-gangrena-furne/">
+<span class="md-ellipsis">
+    
+  
+    Гангрена Фурнье
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-gidrotsele/">
+<span class="md-ellipsis">
+    
+  
+    Гидроцеле (водянка оболочек яичка)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-gipoaktivnyi-mochevoi-puzyr/">
+<span class="md-ellipsis">
+    
+  
+    Гипоактивный мочевой пузырь: определение, диагностика, консервативное лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-gipoaktivnyi-mochevoi-puzyr-khirurgiya/">
+<span class="md-ellipsis">
+    
+  
+    Гипоактивный мочевой пузырь: хирургическое лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-gonokokkovaya-infektsiya/">
+<span class="md-ellipsis">
+    
+  
+    Гонококковая инфекция: клиника, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-dgpzh-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Доброкачественная гиперплазия предстательной железы: клиника и диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-dgpzh-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Доброкачественная гиперплазия предстательной железы: лечение и наблюдение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-kista-pochki/">
+<span class="md-ellipsis">
+    
+  
+    Киста почки: классификация Bosniak, диагностика, тактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-klassifikatsiya-imvp/">
+<span class="md-ellipsis">
+    
+  
+    Классификация инфекций мочевыводящих путей (ORENUC, EAU)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-mkb-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Мочекаменная болезнь: диагностика (в т.ч. у беременных и детей)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-mkb-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Мочекаменная болезнь: лечение камней почки и мочеточника
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-muzhskoe-besplodie-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Мужское бесплодие: неинвазивное лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-muzhskoe-besplodie-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Мужское бесплодие: обследование и спермограмма
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-nederzhanie-mochi-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Недержание мочи (стрессовое, ургентное, смешанное): классификация и диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-nederzhanie-mochi-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Недержание мочи: лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-neirogennaya-disfunktsiya-nmp-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Нейрогенная дисфункция нижних мочевыводящих путей: классификация и диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-neirogennaya-disfunktsiya-nmp-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Нейрогенная дисфункция нижних мочевыводящих путей: лечение и наблюдение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-nitrity-v-moche/">
+<span class="md-ellipsis">
+    
+  
+    Нитриты в моче: интерпретация и тактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-orkhit-epididimit/">
+<span class="md-ellipsis">
+    
+  
+    Орхит и эпидидимит
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-ostryi-prostatit/">
+<span class="md-ellipsis">
+    
+  
+    Острый бактериальный простатит и абсцесс предстательной железы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-ostryi-tsistit-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Острый неосложнённый цистит: антибактериальная терапия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-ostryi-tsistit-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Острый неосложнённый цистит: факторы риска, жалобы, диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-ostryi-pielonefrit-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Острый пиелонефрит: антибактериальная терапия (неосложнённый, осложнённый, септический)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-ostryi-pielonefrit-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Острый пиелонефрит: клиника, дифференциальная и лабораторно-инструментальная диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-perekrut-yaichka/">
+<span class="md-ellipsis">
+    
+  
+    Перекрут яичка
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-pochechnaya-kolika/">
+<span class="md-ellipsis">
+    
+  
+    Почечная колика: диагностика, обезболивание, показания к госпитализации
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-pochechnaya-kolika-krasnye-flagi-anamnez/">
+<span class="md-ellipsis">
+    
+  
+    Почечная колика: красные флаги, маршрутизация, сбор анамнеза
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-prezhdevremennaya-eyakulyatsiya/">
+<span class="md-ellipsis">
+    
+  
+    Преждевременная эякуляция: диагностика и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-priapizm/">
+<span class="md-ellipsis">
+    
+  
+    Приапизм
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-retsidiviruyushchie-inmp-profilaktika/">
+<span class="md-ellipsis">
+    
+  
+    Рецидивирующие инфекции нижних мочевых путей: поведенческая и неантибактериальная профилактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-travma-mochevogo-puzyrya/">
+<span class="md-ellipsis">
+    
+  
+    Травма мочевого пузыря
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-travma-mochetochnika/">
+<span class="md-ellipsis">
+    
+  
+    Травма мочеточника
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-travma-pochki-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Травма почки: красные флаги, классификация, диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-travma-pochki-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Травма почки: лечение, осложнения, наблюдение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-uretrit/">
+<span class="md-ellipsis">
+    
+  
+    Уретрит: диагностика и лечение (гонококковый и негонококковый)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-fimoz-parafimoz/">
+<span class="md-ellipsis">
+    
+  
+    Фимоз и парафимоз
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-khronicheskii-tsistit/">
+<span class="md-ellipsis">
+    
+  
+    Хронический (рецидивирующий) бактериальный цистит: диагностика и профилактика рецидивов
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-khronicheskii-bakterialnyi-prostatit/">
+<span class="md-ellipsis">
+    
+  
+    Хронический бактериальный простатит
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-erektilnaya-disfunktsiya-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Эректильная дисфункция: лечение (ингибиторы ФДЭ-5 и др.)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../urologiya/urologiya-erektilnaya-disfunktsiya-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Эректильная дисфункция: причины и диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../kirurgiya/">
+<span class="md-ellipsis">
+    
+  
+    Хирургия
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Хирургия
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-prp-terapiya/">
+<span class="md-ellipsis">
+    
+  
+    PRP-терапия (плазмолифтинг): доказательность и позиция КР
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-abstsess/">
+<span class="md-ellipsis">
+    
+  
+    Абсцесс мягких тканей: красные флаги, вскрытие, антибиотики
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-analnaya-treshchina/">
+<span class="md-ellipsis">
+    
+  
+    Анальная трещина: клиника, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-varikoznaya-bolezn-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Варикозная болезнь нижних конечностей: красные флаги, CEAP, диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-varikoznaya-bolezn-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Варикозная болезнь нижних конечностей: лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-venotoniki/">
+<span class="md-ellipsis">
+    
+  
+    Венотоники при ВБНК: кому и какие назначать
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-vidy-povyazok/">
+<span class="md-ellipsis">
+    
+  
+    Виды повязок и препаратов для местного лечения ран
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-vnutrisustavnye-prp/">
+<span class="md-ellipsis">
+    
+  
+    Внутрисуставное введение PRP при остеоартрите: данные исследований
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-vnutrisustavnye-gialuronovaya-kislota/">
+<span class="md-ellipsis">
+    
+  
+    Внутрисуставные инъекции гиалуроновой кислоты при остеоартрите
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-vnutrisustavnye-gks/">
+<span class="md-ellipsis">
+    
+  
+    Внутрисуставные инъекции глюкокортикоидов при остеоартрите
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-gemorroi-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Геморрой: диагностика и показания к очной консультации проктолога
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-gemorroi-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Геморрой: консервативное и хирургическое лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-gemorroi-klinika/">
+<span class="md-ellipsis">
+    
+  
+    Геморрой: красные флаги, классификация, клиника
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-gigroma/">
+<span class="md-ellipsis">
+    
+  
+    Гигрома (ганглион): диагностика и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-gidradenit/">
+<span class="md-ellipsis">
+    
+  
+    Гнойный гидраденит (Hidradenitis suppurativa)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-impidzhment-plecha-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Импиджмент-синдром и тендинопатия вращательной манжеты плеча: анатомия и клиническая диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-impidzhment-plecha-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Импиджмент-синдром плеча: инструментальная диагностика, дифдиагноз, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-fizioterapiya-metody/">
+<span class="md-ellipsis">
+    
+  
+    Методы физиотерапии: что доказано, что нет (ЛФК, магнит, лазер, УВТ, электрофорез)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-ostryi-divertikulit-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Острый дивертикулит: клиника, осложнения, диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-ostryi-divertikulit-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Острый дивертикулит: показания к госпитализации и лечение (неосложнённый и осложнённый)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-panaritsii/">
+<span class="md-ellipsis">
+    
+  
+    Панариций и паронихия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-poverkhnostnyi-bursit/">
+<span class="md-ellipsis">
+    
+  
+    Поверхностный бурсит: причины, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-poverkhnostnyi-tromboflebit/">
+<span class="md-ellipsis">
+    
+  
+    Поверхностный тромбофлебит: диагностика и антикоагулянтная терапия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-prolezhni/">
+<span class="md-ellipsis">
+    
+  
+    Пролежни: стадии и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-endoprotezirovanie-kolena/">
+<span class="md-ellipsis">
+    
+  
+    Тотальное эндопротезирование коленного сустава: показания, противопоказания, осложнения
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-tromboz-glubokikh-ven/">
+<span class="md-ellipsis">
+    
+  
+    Тромбоз глубоких вен: диагностика (шкала Уэллса, D-димер) и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-troficheskaya-yazva/">
+<span class="md-ellipsis">
+    
+  
+    Трофическая язва: красные флаги, этиология, тактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-fizioterapiya-dokazatelnost/">
+<span class="md-ellipsis">
+    
+  
+    Физиотерапия с позиции доказательной медицины: уровни доказательности
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-fizioterapiya-vyvody/">
+<span class="md-ellipsis">
+    
+  
+    Физиотерапия: краткие выводы для практики
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-flegmona/">
+<span class="md-ellipsis">
+    
+  
+    Флегмона: красные флаги и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kirurgiya/khirurgiya-furunkul-karbunkul/">
+<span class="md-ellipsis">
+    
+  
+    Фурункул и карбункул: диагностика и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Эндокринология
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Эндокринология
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-addisonicheskii-kriz/">
+<span class="md-ellipsis">
+    
+  
+    Аддисонический криз (острая надпочечниковая недостаточность): что делать
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-adrenokortikalnyi-rak-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Адренокортикальный рак кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-adrenokortikalnyi-rak/">
+<span class="md-ellipsis">
+    
+  
+    Адренокортикальный рак: диагностика и тактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-akromegaliya/">
+<span class="md-ellipsis">
+    
+  
+    Акромегалия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-akromegaliya/">
+<span class="md-ellipsis">
+    
+  
+    Акромегалия и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-amiodaron-tireopatii/">
+<span class="md-ellipsis">
+    
+  
+    Амиодарон-индуцированные тиреопатии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-anaplasticheskii-rak-shchitovidnoi/">
+<span class="md-ellipsis">
+    
+  
+    Анапластический рак щитовидной железы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-autoimmunnyi-tireoidit/">
+<span class="md-ellipsis">
+    
+  
+    Аутоиммунный тиреоидит: диагностика и тактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vdkn/">
+<span class="md-ellipsis">
+    
+  
+    ВДКН: формы, диагностика, оценка терапии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vitamin-d-gruppy-riska/">
+<span class="md-ellipsis">
+    
+  
+    Витамин D: активные метаболиты, группы риска, беременность, позиция РАЭ
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vitamin-d-dozy/">
+<span class="md-ellipsis">
+    
+  
+    Витамин D: насыщающие дозы и лекарственные взаимодействия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vdkn-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Врождённая дисфункция коры надпочечников кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vtorichnyi-giperparatireoz/">
+<span class="md-ellipsis">
+    
+  
+    Вторичный гиперпаратиреоз: диагностика и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-rak-shchitovidnoi/">
+<span class="md-ellipsis">
+    
+  
+    Высокодифференцированный рак щитовидной железы и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-gsd/">
+<span class="md-ellipsis">
+    
+  
+    Гестационный сахарный диабет: диагностика и ведение (эндокринология)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-ginekomastiya-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Гинекомастия кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-ginekomastiya/">
+<span class="md-ellipsis">
+    
+  
+    Гинекомастия: причины, обследование, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkaltsiemicheskii-kriz/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкальциемический криз: неотложная помощь
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkortitsizm-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм (синдром Кушинга) кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-giperkortitsizm/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkortitsizm-klinika/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм: классификация, клиника, кого скринировать
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkortitsizm-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм: лабораторная диагностика и определение уровня поражения
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkortitsizm-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм: лечение и коррекция осложнений
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperosmolyarnoe-sostoyanie/">
+<span class="md-ellipsis">
+    
+  
+    Гиперосмолярное гипергликемическое состояние
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-giperparatireoz/">
+<span class="md-ellipsis">
+    
+  
+    Гиперпаратиреоз и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-giperprolaktinemiya/">
+<span class="md-ellipsis">
+    
+  
+    Гиперпролактинемия и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperprolaktinemiya-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Гиперпролактинемия кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperprolaktinemiya-kontrol/">
+<span class="md-ellipsis">
+    
+  
+    Гиперпролактинемия: контроль, критерии отмены терапии, хирургическое лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperprolaktinemiya/">
+<span class="md-ellipsis">
+    
+  
+    Гиперпролактинемия: проявления, диагностика, терапия каберголином
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-gipoglikemiya/">
+<span class="md-ellipsis">
+    
+  
+    Гипогликемия: критерии и купирование
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-gipoparatireoz/">
+<span class="md-ellipsis">
+    
+  
+    Гипопаратиреоз и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-gipoparatireoz-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Гипопаратиреоз кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-gipoparatireoz-nablyudenie/">
+<span class="md-ellipsis">
+    
+  
+    Гипопаратиреоз: контроль фосфора и мочевого кальция, послеоперационный ПТГ
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-gipoparatireoz/">
+<span class="md-ellipsis">
+    
+  
+    Гипопаратиреоз: причины, диагностика, поддержание кальция
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-gipotireoz-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Гипотиреоз и беременность кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-gipotireoz/">
+<span class="md-ellipsis">
+    
+  
+    Гипотиреоз и беременность: скрининг, коррекция дозы левотироксина
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-gipotireoz/">
+<span class="md-ellipsis">
+    
+  
+    Гипотиреоз: скрининг, диагностика, лечение левотироксином
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vitamin-d-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит витамина D кратко (эндокринология): критерии, терапия, важные комментарии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vitamin-d-diagnostika-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит витамина D: роль, диагностика, клиника, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-defitsit-massy-tela-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит массы тела кратко: критерии и этиология
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-defitsit-massy-tela/">
+<span class="md-ellipsis">
+    
+  
+    Дефицит массы тела: дифференциальная диагностика причин
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-diabeticheskaya-neiropatiya/">
+<span class="md-ellipsis">
+    
+  
+    Диабетическая нейропатия: формы и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-diabeticheskaya-nefropatiya/">
+<span class="md-ellipsis">
+    
+  
+    Диабетическая нефропатия: диагностика и нефропротекция (иАПФ/БРА, иНГЛТ-2, арГПП-1)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-diabeticheskaya-retinopatiya/">
+<span class="md-ellipsis">
+    
+  
+    Диабетическая ретинопатия: скрининг, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-diabeticheskii-ketoatsidoz/">
+<span class="md-ellipsis">
+    
+  
+    Диабетический кетоацидоз: неотложная помощь
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-dtz/">
+<span class="md-ellipsis">
+    
+  
+    Диффузный токсический зоб (болезнь Грейвса)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-intsidentaloma-gipofiza-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Инциденталома гипофиза кратко: критерии, обследования, терапия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-intsidentaloma-gipofiza/">
+<span class="md-ellipsis">
+    
+  
+    Инциденталома гипофиза: анамнез, гормональный скрининг, наблюдение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-intsidentaloma-nadpochechnika-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Инциденталома надпочечника кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-intsidentaloma-nadpochechnika/">
+<span class="md-ellipsis">
+    
+  
+    Инциденталома надпочечника: гормональный скрининг, КТ-фенотип, наблюдение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-vdkn-klassicheskaya/">
+<span class="md-ellipsis">
+    
+  
+    Классическая форма ВДКН и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-laktatatsidoz/">
+<span class="md-ellipsis">
+    
+  
+    Лактатацидоз
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-mgt-protivopokazaniya/">
+<span class="md-ellipsis">
+    
+  
+    МГТ: абсолютные и относительные противопоказания, риск рака груди
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-mgt-progesteron/">
+<span class="md-ellipsis">
+    
+  
+    МГТ: добавление прогестерона, СЭРМ, негормональная терапия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-mgt-rezhimy/">
+<span class="md-ellipsis">
+    
+  
+    МГТ: режимы (монотерапия, комбинированная, монофазная)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-mgt-dozirovanie/">
+<span class="md-ellipsis">
+    
+  
+    МГТ: режимы дозирования эстрогенов
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-mgt-pokazaniya/">
+<span class="md-ellipsis">
+    
+  
+    МГТ: цель, обследование перед назначением, показания
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-meduyarnyi-rak-shchitovidnoi/">
+<span class="md-ellipsis">
+    
+  
+    Медуллярный рак щитовидной железы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-menopauza-simptomy/">
+<span class="md-ellipsis">
+    
+  
+    Менопауза: периоды и климактерические симптомы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-muzhskoi-gipogonadizm-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Мужской гипогонадизм кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-muzhskoi-gipogonadizm/">
+<span class="md-ellipsis">
+    
+  
+    Мужской гипогонадизм: диагностика, виды, лечение, противопоказания, контроль
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-nadpochechnikovaya-nedostatochnost/">
+<span class="md-ellipsis">
+    
+  
+    Надпочечниковая недостаточность и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-nadpochechnikovaya-nedostatochnost-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Надпочечниковая недостаточность кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-nadpochechnikovaya-nedostatochnost-klinika/">
+<span class="md-ellipsis">
+    
+  
+    Надпочечниковая недостаточность: виды, причины, клиника первичной и вторичной
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Надпочечниковая недостаточность: диагностика, заместительная терапия, стресс-дозы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-nediabeticheskaya-gipoglikemiya/">
+<span class="md-ellipsis">
+    
+  
+    Недиабетическая гипогликемия: причины, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-vdkn-neklassicheskaya/">
+<span class="md-ellipsis">
+    
+  
+    Неклассическая форма ВДКН и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-nesakharnyi-diabet/">
+<span class="md-ellipsis">
+    
+  
+    Несахарный диабет и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-nesakharnyi-diabet-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Несахарный диабет кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-nesakharnyi-diabet/">
+<span class="md-ellipsis">
+    
+  
+    Несахарный диабет: диагностические пробы и лечение (десмопрессин)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-ozhirenie-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Ожирение кратко: критерии, обследования, терапия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-ozhirenie-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Ожирение: классификация и обследование
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-ozhirenie-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Ожирение: питание, нагрузка, медикаменты (орлистат, сибутрамин, арГПП-1), хирургия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-osteoporoz-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Остеопороз кратко: критерии, обследования, терапия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-osteoporoz/">
+<span class="md-ellipsis">
+    
+  
+    Остеопороз: причины, FRAX, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-ostraya-gipokaltsiemiya/">
+<span class="md-ellipsis">
+    
+  
+    Острая гипокальциемия: неотложная помощь
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-rak-shchitovidnoi-differentsirovannyi/">
+<span class="md-ellipsis">
+    
+  
+    Папиллярный и фолликулярный рак щитовидной железы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-pga/">
+<span class="md-ellipsis">
+    
+  
+    Первичный гиперальдостеронизм и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-pga-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Первичный гиперальдостеронизм кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-pga/">
+<span class="md-ellipsis">
+    
+  
+    Первичный гиперальдостеронизм: кого скринировать, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-pgpt-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Первичный гиперпаратиреоз кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-pgpt-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Первичный гиперпаратиреоз: дифференциальная, лабораторная и инструментальная диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-pgpt-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Первичный гиперпаратиреоз: лечение, наблюдение, формулы кальция
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-podostryi-tireoidit/">
+<span class="md-ellipsis">
+    
+  
+    Подострый тиреоидит (де Кервена)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-poslerodovoi-tireoidit/">
+<span class="md-ellipsis">
+    
+  
+    Послеродовой тиреоидит
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-sd1/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет 1 типа: ведение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-sd2/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет 2 типа: ведение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-sd/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет и беременность: планирование, противопоказания к зачатию, ведение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-sd-kriterii-diagnostiki/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет: критерии диагностики, ПГТТ, HbA1c
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-sindrom-diabeticheskoi-stopy/">
+<span class="md-ellipsis">
+    
+  
+    Синдром диабетической стопы: красные флаги и маршрутизация
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-sds-diagnostika-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Синдром диабетической стопы: формы, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-men-1/">
+<span class="md-ellipsis">
+    
+  
+    Синдром множественной эндокринной неоплазии 1 типа (МЭН 1)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-men-2/">
+<span class="md-ellipsis">
+    
+  
+    Синдром множественной эндокринной неоплазии 2 типа (МЭН 2А, 2В)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-spkya-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Синдром поликистозных яичников кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-spkya/">
+<span class="md-ellipsis">
+    
+  
+    СПКЯ: критерии, УЗИ, дифференциальная диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-tireotoksikoz/">
+<span class="md-ellipsis">
+    
+  
+    Тиреотоксикоз и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-tireotoksikoz-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Тиреотоксикоз: дифференциальная диагностика (сцинтиграфия) и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-tireotoksikoz/">
+<span class="md-ellipsis">
+    
+  
+    Тиреотоксикоз: причины и диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-uzlovoi-zob/">
+<span class="md-ellipsis">
+    
+  
+    Узловой зоб: обследование, EU-TIRADS, Бетесда, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-beremennost-feokhromotsitoma/">
+<span class="md-ellipsis">
+    
+  
+    Феохромоцитома и беременность
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-feokhromotsitoma-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Феохромоцитома/параганглиома кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-feokhromotsitoma/">
+<span class="md-ellipsis">
+    
+  
+    Феохромоцитома: показания к диагностике, топическая диагностика, предоперационное ведение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-funktsionalnaya-avtonomiya/">
+<span class="md-ellipsis">
+    
+  
+    Функциональная автономия щитовидной железы (токсическая аденома, МУТЗ)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-endokrinnaya-oftalmopatiya/">
+<span class="md-ellipsis">
+    
+  
+    Эндокринная офтальмопатия: кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-eop-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Эндокринная офтальмопатия: оценка активности и лечение по тяжести
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary" style="display:none !important">mmD5v7VOPi5dwvohZohd/g==;EWtalpEA62nXl6PJqMZ37A==</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div id="mkdocs-encrypted-content" style="display:none">pna+F/4kFSZdg+/L3f3hxA==;9ZlBvc9NaUaIdvgbTr1CpF1J4modpkuqyhtX+ZmxRai+EPL8Krdagnw2oSAJX2ruzJ/UI76hNWUB21M7z6NBzQVk9e5RgA+59/OGimD0/Ij5F17T3uh9vZ6jLcJPV0twC+5yR4DtMO6HBHHq5zBBqeKnnPf2YYEUB0vOSzU+gb5iBl/KDjTDXPcx+t2vQVXdPz7pNrJbJaoD/tV+aqXyV9vLUpK7JfTUZrz0fx6MSQXHlr0oDRultutnkMcjB5yNkeQKhg14Y6CBod34Z8liVuoDckWk0c5Fftw4NQR/BFF6QeQI4Khp8jqoLddK48Q3eqlSILPcIN4TSrYk9vCUVv8kl0C6AvNWzsXAONQRbK/8X1j+1Kxa04jg7VH2Wi5UzcSBt6LHL7Vr8eJZI7ntbHUyNLguMsMwBIH2t0y+b9c1t/hd9SUgvwgX1DV/VzFbi9toWA45rhQhiqet8ACWY+okm4ItGhvz7KSUznrlyyi62og69nsMnUcce2cS0AAxyZVanQKfTdofr5sk24YUY+gs0A7ZwSjWIYrR2K0I0j0fShShsvUzgWJ1PKQnXsf2JB1+gPjQ54BDweupqnHr3PGy7amt4VosjwvI4NxCXzpP0WMYd1s3hDRzK+1/MeU3BCE3gVXaXknCAc2BVo1ZxOCs4JBSM04j94RGW+22ZvRLPNwjZ1essFoXuoqEYJidXhw3ByBiS16L4FUBoU68y7Ctf9dTA0ni3QT8r75QkSOcwWY2YRGEbfx7NbAZI0/0iXftHRx/HfFwnv7tU86+W+pB82Jtb2t3y/wvDHg6oZSWJZY+EGWJBfWuqEJ/L3lQEJRDemXjNo4vEr1gMbrPp3k5v4+3jlFygxBvAtndbWRQtFZ6UlhMlmB1/b/eA7YtcZVguCqKqUvsfeJ8ZeGUN0BErzvnxefKhz+H6mWozQ1rijJoIKCGONBbaMq8oV7xIb5nCtP2bua0nz2RNrUVVZdHwVcruri29E8YBoHMX7F9u22w0a6DCoRRSoeGu2IZeoQeFA1S9okIUvFywuco6huhr+XabPYiJJyRLX8upi9PmwW2HNf6889k/ezHXY7/S/7F9bcQyNDPVSOLLsEas3utnGR0xHxeblF99Jd4USUWZJOEgX/AjiuWYesedBjq9qbCu8Gwp104IFrGoZQ7/ONBiOjTkCqoRSSxAGK9XPm6x9fq4pGIgsYGNN7MJ6fGRu+TfJ878tuRQP+uugWILywKQduvnXaM94wSzhADaYU4hOTxwN/q31w9h2bbjgslr6tH0MSwDEecGBxqmdOWd4mk9TZGT0e/NHDLN8dnbmx4E/HXvX0SPIy6pmZyVaNBgEB0sjsdDYVBtrg9WC4+lBzucQPCTIWAbbiyeVmmBjg7enplCNhAYhaOQm9QRksicqJIUeFpM+VL/qGthryMMsLdtFe+0cpLPJjYUnKsVj9S0Jo+Eirj0QG+5dvHZxSk2Okqs4xTi8qqo+327eOTBbP3mZecrDSSjIA7ekWIfU7wOqanAPqpthWEEW5cqYKWDHlFuq70IfBQwdXjvlGvCJVOh9WiCTQf12mO1wM0YMkBc9NdJpgV8K+W09oxeC/El7BoJl9wvgHFn0Gy8zU8Mp3f9N+SkPNsaXg+AU2xMZ7R+XLt9HAU6ByvQRDAdSCSpfsmS6UfMTEn0Lg+26lsjvwhGDMVw88t2+udxi8LtSLJ+7ebPQsXmiQuaoLKbOxcCUR8yXOQhvszgODmw7soL493UHO5yAecHWr0Ro7eeK6Ra3S7Eo9chbAusxzgGUjIt4EChyJFLXiNWbmDgZPGiLENAlyh2r7SZvu6g3Htvcv8sM9qEcVIkSPc5qWN924S8q4Yaf1+py/rkynVU2DDKNEwx9M+ieZFCD/OnG5m3OI1E8ovIFTrd227O38RxUbDpSOTdslBJZenFYTk2QDB1a/273FcKmkhp0QOKaBnuu020U+7h/uV7eM2K8Zsy/lNCh1KlRUMXlykI9E2mVSL07pepf9YbcwTKZJFIoHk62QqzWY4KDc2ZpM1Wdle7o1cv3n0d3ZssUuOI2WpZEcj3hfKTCDOG712BLsfgSecXlAb47lgMXXt8/Z25x9afEj0YQWBGZYu9tJn6PTQFU6iugEXt1QO2yEjcBPO8r3vQOmtcZAcbAqbxvXddhE8qCX1uVLFbnZ+cHUi2t3QVs3nzkJ0ncJQAsmjuX8yg6fyNEC1RkZdbGUNAu99VfChREyqlRUl33KhYiiud5KT1FeGnBnRqz5H9O+3wYnSytGFtvcVQe6XYyq+fb2t5NbczfvGqD7FQQIkaEUx/ocoq+qbLjUxAaRoQWL4AKD74eDsxfVEBPchLgQbaQ8+l676Ql3AEmWrK6pvClC0R+sic+FrckoF2yTvE9CJG3oDiF6q+WW0a7pKE3r5NwIN1UZvwXxeO062YolpwKpeDZXEsizR+Rxag9nCu7XQh3RkhLXCkfBLXcM/8QsCj7uq1S87G91etcFq+jfjhEYxWP8+v1B1bJJWiso+yQhZz9P/y7th2KvVrt1SxcuCmWNqsuCS4BzR/1JtpN4uy5aWXXrejCpSsfwaGhKGoQ9TGHIE7qL9FKjGSFs1IoQSdWBzQ63veXquvHYcUZ6GUKeSVP9MOM8oenaN/vYsUb0kmwW575j1zenSL4A5zYgWOBjUNHCI/gtDzUobTYM3a5sLeuLVqK06clSvBKH2sBTstDS9NeNUZVdOftQcXJ9/X1NmcXpYebt7gZy6v8MvkCzlWUl5lxf1vHMXJxKFU4UqFM8G84k8OEvpXw4dCcjTlDZ/YjD3Ki07DSm8S4X8+arR9MVdyY+MwHVZHZUEEx7aLtdLuTRgUu9Q5oVcvTQa0ivbNSHqE/pKdK/tW317UdSUeUcPicm2m1oFSDGw606hHUHXPH5e2eul+v2ZUJWQxzrJFtKpabpbgSb4FCuf0B8dqRklDx9ieMexxS3FffhceyU6pim79Lqnpqtg95NSAMLkAEdYR0RaTyV788diB++37mpTuNs/jq7clrqzWFblzPCi9s1S6fV5hXsuQvK4Tfybm+ThBjR469M+HFx779VcYO8U93d6R2k3avygg9uIYYDL8jB8xfRJt1jDhQFY8l2XWEVW6kt8Y2onJM0YgY4W2Pf0rsccgfw8NIA96QzeZZgSJa+k1nfYoO64Tt7O4TAHLkFf0qOjEm9pyOJAbSx3gh1aDEIMYL/XpQk8WNcf6+1pmhZcZwxZeRmHpFBhG5OGCqrMmXwEhbqrjCw9yqfFbx7KHl5to00X/HQg+QP9DT/UjDxoOUXTwfiAFNrBrqEtxlhcyPEFFor0yNbrL98UyPsEsa1SLhitLpqEendjNTi6bZHz8UAmGbzC8q8Tir4Rtra/rq1tMcTsbIJig/edA91EIhhT41jBN62SZjocxUVDvW05S/yu7266OA3EbRfSpLB/QIgjcsoQ3sFSc1UpnVj0ACwHFqwXMXfDnr3uKVU+ksLpk+Q6364ftDn2BJ+b9PaHvYv7TkdLPQ/lbu+ebdTOXYy42m7aNQlly5i69VbXv8/ekJcz3TJuaIwtK/6BOdXwiGcKzxGcnVaRjwqz6kClCYR3VW7fmtw0y2D8dXDwcPjJiS1EHdUTGF3KUas9wybXt7CyRQVpWkKuUiGIWHx9h9i9xmOTw5iwwXa/Zy2tpKn72nAm7Z5WqS0v8u6KxlDaKdy84g2I9v9zCCG68Wga00Erjv70OqyHbXojyxB0BotpDzDLCxGfeLBOqYPOzdXmtjE4l5p6QmQH1vPUXphc6kDEjmH72KOVPS3mYUBLOJZEW1Shi+EkNLSP3nA9EmSt1XG1lL3MgnHzZOX7ZQXkcUFJ4+rg1E/VA6VaqgO7rNiugHh73Oircp4U0IkHW4w+DuzkrsvGC7/tKQAqBdvopC1bg+7LzcF/U7PbNpZouqEpRVv9abXp15i9wDyNGnxPYSGnTRVeBXCKz5cZD7GaK/Oih5NwifvgidrJ2KzP83KaMqx7kchyNaNq+2c2L1jC6j12K2QKeCchR58mamu6SjcMHoltUeA/i6G1wSs/BTOOlONjowUgmCjTdym5RLpAME8+pI2GDSmVb0heP7IElU8OAlqZfpLwDlALjMa9zRRFWUp5Rm2jFXCp1m97IPqDe3uXd175AwK+gYdw7jvrW4kY+ytq84ppmogFUjPOcXawhzhjmi21/jWsddCF/87nzbQg3cRNL9mG6/TdklkAnfGSFvNpk/UGQs5RXsBy0eVWLq1+qC/N/qW2lEXs55ooKWZeGa2CM47whteoaRUayVKoILMtPcy3bvjqN3VhOMRydNYQ7VMR39Jj7thY50ybfqC2RGjPQzzFIhf5DcKsor2pljS3Nlf8l52tiNPOHbO29MZhTmilmxHq9241P4DDJxP3kO7BzP7WueOLBNKJZvltgXQoYxmBFp42LZj2BHbzJRLadArRydPaHUSMynYJtILwSDrFfCeepgjDj3R5vIUFM0Ur6lK7lt2FR0OqgJsRvkPFDF0wEPZzYFaE7l8wlsq9YAI6bE/ATiL09/vjMD73BhnHeWJd0zux9O1x9/3lWDGL3ZBGdvijJgoXLC06PxIEZv/bKuUE0wnW/N7wyiTZU6D3tPyN4sIxRK/5AgaHi8DdOm/N9I3KKekC5KNeBmPxiY8iktSp/T0mxT051pzPp3qACyDqQHwL2dXp9Kno6iZUzvYrWZKaDfo6vWwItD9vDxoNf/nQ7egMNi3lNyUGbVWgpcFNIHgJVvSaL5INlK50bSHx2Ek2OqGtPJDooVEP55wb3B5C9bwnoewACSlEDBARRXHedQGemdXX5Qm8HVI/nHsAgzH8EY9cEeAf4ky6s48oC0AHB7IsGz25PDntJhFA0qsVpPamCbhQSQVEKlCvYw2xW3vzn1wveO4dOld6y6/Ewpn21uMb24iiFKt4fbMIkG894jo+NE01dFDZqC5SKV4x3nMmYmj43ywHGr2adPu2hyiSVuz02U0U3WR2RpQt+sRckVCiXTIOZ6EE6RNP8PqOvMCeJv6Mcmr4p/CS/41+e4xCD7QWemkmKFKm04xsnoSZCMNL1sn32JM8OkQuNShb/yUQ/rx8Fk5au4yTWhCcLAxRwMzzgvAzEidn9TwbhrhmxwdWPmwVEOzYX0C2PPSQJ+16Eck/YJDErzF1WFV9bkOsVneCr1DOksQRMBOaqKGopsAivD3jReNZVmeQISITXxvRYBIdhsWGh6aOgDat1JG7l2bqMwUWAiurUmlREht11PYhMbJXEWbKYKKbjDtsNJDaqNnsW0lyHlEBXp7eyZUyyus4NOAORiRjXx2tcoTeFGEKyrKYKEd5ZslAFx6+8qIp/YkXN9Dg2TU6BouVB1f5ZHisSThkxLhue+nRChw3svKBkhZcAG6Hatxxz08gG4cCqAvBBqvvISaZ6lzy6Uz8dSK/qcRKXdyKRhu9Xy8sNbY/10QipYrUXtmFdpIM7/QRP4hR+xnuJBmKuLGtX9e9N2N1mUNza0LfQM+KxS6Q1Gi4+g7MvGqzyrjUHZZoahxU4fYa4kER+Lm9xGDdd7I+Oq0Yp+q1j/5oeV1lkMAQtttl9G5JMyeyGNJIAnnJ/njwGzcngduHONT2pBnPH/lvq2+HE03bITXHtq158wXxSfhp6TC0arrdOKZcL1LVGGb8TpOpS++2E0lhqKlqrioAN/lrhxVWS161cfiUDBIWegIGHoR7mY1lVsU9F+siN8fR7gouTQkR7v6VE/zPYDKlxVvz1PbLy6MfNJ2yG/qjYr/XFPULXdRJ1cCozL4PheN0E0VL9V8U9+sp10gt1WpVLbsDWvwskVGNrXE0aiGCCb4QZ0/w8KNMUKfUFu8NBVbrP6iU+jPT7pYFKV0AwhQaArI51YZhCsItMR4frVmlMFYLK6fclSBCKmzN2XF1n/4z6ICW0AEdaCAbjLv+jqzgVXji13j+tCaLG0cqWnaQ0XTy8af1Y3oVmhAMLuah2f+mn/9y64B/euAPdAoK8smGVlYMFg/G70HJwWcnpllOOlEoofCFqZRlCmyz0zgi7dxv72tJ8xjTKKGeJQ5NzOIBuYK15up8PLAJ56GJCb1mHFtdu+G6lsvFdBoSBEqL5qI1scQbqh6k56UMifZfy8vwh5KaUDuCXib9TVoPVuAsPPYhHilcPaodNmaLtbvlqo8kVfW/qGLZe/ZezguwfrHj6oVouIiXBZL0ZP0qrY6Qomb/FfVeYcDV82fGg7LHWz8CSS/4NvMo/5j1xRvg38oqjbugGcyZbdouwWZvAqAvLDow6IlpFfv+9zuVT5H2yz8oy8SYtbdx822nQubkZZ67QrNriLUzhnni2uvSdCzfMzDSuylcfOjHhGiNf86uNS9pjqvKlZhjqPnj+aV3El7Sxk7e42u7q46NHaSw7SImK3n4yS0wg2/Vz6AiMBU0GxiBxGADTsR72xtV9j0zmB46AggcnnzJ0oqCzENs4YfxCsWzvaApFTb8y1TR7mOUD4DyX6UflBlBTxfVyD+GckgtYFy2SsKdX83iwVEt3RYIPTBy1O8E8lUg+IFqGrKtqUuWZ0tzuGzoYK/hrM39l3DM2VImuD36OZDAYwwVT0TUQ7MIY38EzFMz3iGrwQhyYxEOAOckxIpPaTycOot/9IbZqs/4sK0giWdoZqCMZ7qvuHlh1YEu4EFOh9uRzaN+PxocBmdsNa+D8EkrimlcbncCPkO4517yUyG5cIHpVK2enKO9qoRC4GW5CO120uJG+bYPLnv8SURckewlCL/Eu0DpgAKstDa6doiQvBZyUgEq/uxf8u9X8owBSakjoaX8hNAE09AJkr04okEi0OXponOEX9jAUb1aif/wE0nzekKrVLxxgo0J3ZjtQsvxJeOldwioG5YPm0U17MjmblER5soov8ESSIiZ6zVWTneKzZc9jDViBccQsIP83BSEiDYo5LCvkAzIlMAxPziuVgU/8HbhifhmsCBSYv65YBo2lhoSxQUemV4iIK+8wgOc4wDamP5IFh0Ohtol8Jhy35nD0aANfXd+PT5dajiGk3aoGNx/5NnFnDRYerDOoUB8kYODtOoiN5pumguv5YExalwukp1hdG6wv7QetSpyfNXEu4Nde+fEwNR7MJmAJ6FHvg7oucwBrKCCMek82xDKasgq/apjzd9/2FpxdYSFPOU9mEsPzmDP1JU4jP6V0iIJEcYP/gJ5xF0m1UCPrvQODpnNnNnRREG+P2jfsKcaBVRMbaN+flwP+8Ut8FiVn4VoXIN4LZbcIV+wljN40+6FqZ3iuUsjGz/C03vwD6a2i8M2S9LOrpZC2PeAfDHvnNp/pGhob5GWfbO1dXCOCiig0hmRkcNp6z54dK6gnXArjm+VhpQdHCA2CaCwgwHUUE07St74M9Zq4v6F9InhyTM5Rk8S31wes5YNxepOg4GbPUzHiqaWpVUa1VInosoYktfALCxRmg+J/er6BvKIqjdq9WFkZSbh+FROM4NjEz1alvFC5Tnku/evhRtovjfNs+SbL0PCoDDzr/XvNiNXvne3ABfBXHVC7kTrHpmkc8+cHP7qYxuP3uJjAuYnf4pF736imdY7byff64eRbs6x7U75+1o5fJgApnYfS7Abd5ZJCPLsK99l2NrAMj7ujNv8oNtItH7d4NgLd5g0MjXBzOnfg+vzp+mwH+xHefym8tKB9PnoGqf+pqAmhP3ip4/lIflR/dzulmHWgbaGui8FM9rWicXPXP5wvQ36irvtbAwkqAGruz3QBUg6jPnMcnmndoHhjtG08YbkAljK5OCjNA+jqr/YHfh5/ENMzY6DJG/hlEOIeMTUWyVbiAY0BZOweXR1adr3l8+QRvR6OPxUCscsNj9VocAOGMh7SS8frtgzrY2Dqsvp/yIpsntQTC6tqFBSUBZH6cQPIhMGKzzlBjICDIYtqLTDvM7xqGe9u5NG63DalPUF18oouPLKU5C87fVftsXqtUe9T1VmesBGHqXiySCZiHB51OeBGtLvQGjS8QBQmjYDTFdgUIgxuofavSAQymMhNhiGPhC43blDKnNzRGJHTAS+NNGdbnt7dJ0wRMjct1iMcb9yHTxVZGw13K5I7T1evc8CBk63cNldx/qSfGn/8JciYLzAZcCxSwocDHen6Kzv/UEYHHxruxrXpaCJdVBs3LVXDiwXKBnkw56dvz9KB1GsXQCtilWdXaslk4V1zZ/a/C4JAyNgBM2WRC/P2OG/oj6DVDtTA4GmLDGXpFwhlJnuQH1NpFTQD9UTq6c+5yFCEKCiYGNJlfGbREHePhu9UPfZ/NHWxhWT2g5Ky9ObEpIqRyWUF4S3PBD2n7yWkcmEoyBjZCqJO3rit1RZq0c46m+O/gzkVAyBo9BSt+ghsaTwaUtwOotqhso+hefUh2OtGC+8R+opj1l9enigjxtnLTFUgnLx4op3M9TO6XqT7ay/VYSqMPI7CAEY0TYDSLfzLRa6tsIzuUMh7D99h5ST3ktUi+KwyiWHOMLPxY3rWP8ozxdIZOI+mcX6OMzqEKeMcogdu84WW92iY7kKMlzaTQaqMNWZgLwXzb5FcTU9n0aD2B31QxjgloK/3wQYqwJwYsgrR7cufiHrZRu+4imQj+Gmd/S4sQ1lIwi3sW6hB6aa775WGU8evqYZPI0EZfe56QrlV+tA62Ud3KQ+mfbo2AQ0fdX4R+DmR9DjX/WoqXjeYB3ROkLdhQQ4rkGNkTjiXt2YFVaZVasf4m97MLIUrjkmaVDqV3Wg2/AqvAEVy0neCS1yKMjH30wUyyPz16CEtY1fpXty3minLsbzSa14LUTuNNHLwB8Kx+NZJuEbJ0oK1ksxW2HbmcEwSBuV/Qidg0ZLo2r/nMr/ZzEGEDI1P36kUqM9rhVmoPNPHDuehgLV3GxLAtIji0k2Wfo4u28hstGBiAKIxteOCKmD8ceziAMqLL1T4xL8rYMzuxzUIK7s16Su48kbIqQLL//tJ6hsrqxpigKq0G01EuosPwVaIIyTszuX3stO3W8mkqJhrXKyvpqdQURdronBmpYBKLVcvpSo/cOKKIXfs5ZqmBxk/uobs40ph6m7q8j1Ac9i6wCV4bAyzikRKR2y9fz1UE+ageDcbdYERWcX3Cz1NUgLh0daqbt9GImFMPfuRyywYBHKgnhIsl2tfRJyZX29wYQHD37sQxSbwB9hWBxLewhsmwKOQhpGOzlsCay17YQmFqNB6lS3U2eeC/X2dxPj98rwzXdei1d/jgeKd/sB0Bpzq+CnKYER1RHDxw8k5tdgMyqfQV4Lk/1chLV0i2Z8xRcgLDHsjA9sxVpXwefswJgpsAvctfPFhmq0mklnr2RTHdJqPWA3u9kr/OUy210nrcgriMrVzNNlkR/bC714qaf+rGdGV2BiKJ0i3FM4CXhFxIrSaQiB3m2AnpHpDia6P4JvDOj+haL3dGjDd673gsY5XSIcNJBVZVaAW5nT4i5pPb4FGl9+yuhT/VORkB7z7DCuoKDf11J8cIiNRFBEfYGlbNPJ6dSSiFnEztNmOXZeciu7kdfzumGwLJbhA8dSXmPiggWdeeaFMnNgVkMoTZQYM9gr2x/BNLbRH7y/PpMXVrlSODI3uymrkFbwjwpNm0wXnfTn3NFzacviJaClXsD/zgDn8uW5Cg/4Y0iFkDqL1GqIywSKKpreqe1wZ0IiFXQDylxpvPMNo5dHJYKrrzF4plShM9+9cGKP4tVqAmjycHmHMcZLO+1n5WTDlWqSlK47ow6Qovee9NP2CM8fvAOm8QGk5K/PtYgtYK9cT7a2epIzMatK6CNMkSQXlWpV3ppsfXNhB869RUx3MZT1YRp8m22OJKaEVabKEPakeHAaxRAlWnAsF1OTg42+jGllv5cFDHIM/dq4TTOGEIpiLfq/Cfkdp0SteoZM7xGCpxpSOYARTJm1qFwcrcVcab90T/ksv7D8tNOzpQ3PrwM4VHM4UZT+IRlBa6N/kg1vIe0QybCUO5KvTuT1aA9rpexjJUpG2WLSUNTeqcJqkUyms/x6PEOUqSGnZCNzkgxXzFaYxiZU741WzzXXjoAf18An8z+eQQDBu3l+/eq4VWwuViK1nUFTAWTl8x/DXALkn2hT/yu/1VOzWKIK54GwFs2KXmVMbSBTkYirbCd7R4leuSyy5OB3GTyPcVc5OGrcSaG/3fk54PMRn8yD3Bv/B9tedds+insDJYdw3aUKuiUe9UG8msFWc34Lg0bQwfyDR0UjEIh3fvq43FYYp+V8ih7StROf89H1Av16tkwFsec+mStG463lSKblzI4sg2ekOkY4jlntSMTrbU7ZXNPL8LN3TW1GQu2oZwaP3qYOwyqsNKFNfbTYYODHPqSLgBUIVK4FGBp5GqUPhfmHw5rBYZKuBX4vaNBeHE1U6Ngk2aQidzvefhduxx/WPK+vGGu0hbPXVa2lF+/lejWSDlkVzQUtQhQa2dDgLRbBRdtfxHQN15hfEGMSO3zsxHz7HC19tm3emlEcZeatPojZlDvsPKFBA8GRtTHRD9rcrUJpB9wS6L0pbULrriAs8N4VMmdltUqGqV6LZVarqHeZAGpSemfS2Y2ejHlNfqC0xZN7s4HikTpDBZSlsRz7npcaG2DsUtGjKXMfu1umYaO8A7KPkeZMD6s3Nc8V1Azqjwt5WfQVYhKpTpivywqJpCymvywdrpbG4yhUQCCalDmZWAA8vH5jKHShnhjgD91vEs3VvRh9gPQF74i76P93JQT8mKxkGe1fvNGiZFAQypnxjwgk+iyi27kBZu0cxD0BZ70jYCEtVvUumHNx71Mn58QpRsg2lc+z5ViC2RfezTxORSahko68NewGuCc+PxjFdYaePiwAgWOqGvGbR/xwJGzd5R1DAdWFKi9qn5AiUaXMmNKDmTqsszy/YHcjvDrdH2HkmaF2ROWV1vBWy4IVnTk+hrpLztARSJKVK5kIFHBhhs0HHfcAK7m+C5dc6zNCvaMH1a8ppNRQjJnCEJcnXgc1tRy5sjVdQiQqVnyKOVXwp6t7MBEDKorPtey+8DmZJaeCMfeU/lleEAJEYtw2Ib+91g/Zxwga6sjsGCrRH4+fwWmCUlEiIort1wPwBko3SNF2f4TsvobpIeYqsxHsDeC3bDKBQpkQQxnhX9fyJp/YtkKfIn4lhfN66ZfvJ9QXOBlm3Nc9OoIVmZSgBij8OWgqKO8O/POUX6vRuVdnMxvlUPQT/Dr4rc9NHMeYwXFaZauRMtdQkiE+E20fbUPUOVMIQaXyKwSBwCx5L3INGzM8GVgvcStPCCqE27fjfk5QMUBeTlaxtqCktXR7+fp9IE3TRRDz4ORD0G72AXYjbAfaFlEucZG6sRkBpfpoMYDK/0GAEmAyZ/ecvi3I3cjblzh6Xa06yVv9DU/GiWtG8aev0NeaR2x1xoFRVW6COZlg595pLcXmWY4EQ0Mg+cNKfayrg9T6Bk8LSCyK0qkRltgSegpZw9VWJGkXX1qiXRPj8iHPCHIe9w2gCUog6eX0hyYTXn/MnHlsPKmX2AQPTatDdhWLt4i368JfxG/Yh1MU+EvmxTwrnVAnBLHH/xwm6ZoM7WzW9l1z2yqLrJrs5a9Yo9kkAalSYxrAQER3X6YWVFHCdFgX2H6amwAoScv9k5sbVt9VWKGXF9kcC2nNSSJ3mWQVE4SWaSDjBgvDU+q5dSHtfJWlNN8WRR/hJ26a7BuptyvcUoq2mXsOUtAIrfSdLgcqUIERcllILZ4rod3GIUKzggbyO/vuAbdeUDT0UK+rsPENZpcumWkdYyUKm3j7ecCIM7DONBzWaxH0iwLyavHV2DJjb4XTzi9QE4+mWXKnTZeIjuQkIRwNKS64MK00rjs8nzxq0cYrsoQz0o8lvowDy3O2bf6LImVEDA0jWJhShp9UWx8meiVcB45sYp5Es44etB6Z51dDmX1T+Jv0zc9ZEcn4Wm14jHFyRF91izrRNjnW8rx1MdwP8YVA2j1OdL/ADKPyp273bwRPMbC49kbkdF74YJkzHBmWwz/h3ZzInEUs6+4NCHhiy4AK1lPXfgkP1O3G1YSWoG+NPKx71IsEFY85fErD3rTlriiqCRmI8WOzzUH1mJQkSLfqWgIf4jwPAHuAldmqyibEjflaMlSFubnmmp/6QptsBasCpTlGawlSCg6Whh2idVT12dNDT4EeCXFfjCnw5YDev4CASQUnDQKdTgIdAnvS6AerpEwfZm+/J9w915NCl3ro1O/9N/DedGyIZD8NwcJnbCA+nFda+oz1IfOq9egwAZWjPQcC+n3HbMAubZyEvX3VJhqccicntKSu94va3vGF1tGkdfEF3yZzJCKgoMlvVnwMT5hXvwPx9sittCeIiC6+BaL5wa4ghytuOdSUsY8qY9jcF0MGMIuoUQ3VccPdVe9v1URlHDK812ufZ51vGPfPHo+bwnAEhaBZEeS7fZnDCzuM/KHYVxE+ghogP9BlyG3KwJFGfxsbZALOOF4u9Hu51uQWjv2AFmxQkiFdWz0aYL8Q1qlB2NFdSmJJuWk1wY+MSabycNw4yFwGciqa7yE2ynDUoZsYs12is289x5AkRPU85/C9QdMrQvVJUmIdROlF+U3DJkP6bg1Mh+Nzi+LncFzz5q6w0BriTfOB/OKUnv8D4hB28ovmOe2cHzehT0x9YdxyPiSbov6pGmkn1UHto0rz5NbN7gIwiGRzOvQ8/gCVmQu907DvdkYpjIje7r0pZYdNuYGxi22tM9x6lmpsbx6nFa2JwhoKijIEfZyZamueUACdAub+Hdhy0eDk6XWczbWwLotYJA4htEPrXgDDwgY03Ik/JWoXoXUYhMNAfjJqi2TNX/0bzHe7suh9jcjV8VQjYMWOlTL+kwISSBqO2MkKUrzruf2HJbS6UFFDdogNa83V99RBvD4VwDa6ivaO0lPxPDZU0ZDNV+89Zq8WcEsxnWHFw1AtV+j+FPsZcEaKigBdtrLAE9LXbQhS580DxuaodIsQ5ikggWRWu7tTG5q+9E+WaBXmBGK5973ptYsZLwjRrWCJvDj8OmJ614iH/uNriykV7+7pAa14C+UU6D82ZFcXQRYRo06Ve8cXV36i+gpEVtSgYCJOjSRmaQfULZ0zHItbYKi0tESbMrtY+pTax/P6VpMU609+xEWD4sPb+vZR1GcbvcXol4MhOlQRgfdluXRone9dlyyxa6ez5wxK+L7TU0xmIZ64/i5o9B6rgZOemQymG3IXo5d9OGwT7DfgIhncI4r7ecCLdMkUuydwyICJg44AniVYFRS3UpEEk5wuf4qkoTQK4LD2TzxAkzTEI8ok668gTlaQsVngQ0d2ocbvmRla4REHIi56dvnpy8V4X5p2svXn5ndRi8MJZQd76x8c2d7AhHQ2wkKl5dZ96xmQtW8uDD8LmbzOMKeArzxqIg2nXeDza1bPtBh3jpaV2/lAsh55wm+0ML2XUHhio3jTaohTd6Sbnj1+MdclrdqNGDCQBt+yAmdvTYpo/dLTJdYXCINwVwmWG2FXnljBXesQfdmqLN2G5cie4qdbkyqZJ7juIa1c7A0erdAFzoO5WBj2HuiYuETmZN+hbFFRbsRNqg7wTkumAvE4hOKbpzej6Sqozs0mQYEK1UH5GrtmI4OgOV9DfR3hWgRO5i2Ti6r8u7Dh9YS5YziA8XlN/xskK7u2D7O2ppS15/WtX1PhOJmGy4ilfLCD7/KEnNK7bteWXBEDm8tTFwCGjTYilWN7dTOWTVassciDo470ea4oHXS7rxtvM3ZgMnT30DlZ1mVDf2bcBzxiwLEZU9JFJpl1LghW33HWeHgsB61ReOFfB+3/OgeFWSpTNPO0kuF7sTFn57RxUpS3bxKChdAzHAXI4qMraCrlJT7g1MgKy72qLrjgdym4WcDdcz8b69vbqHv+JUpmcxpdQ8IVKHYArTHrZgnGDQZQfe7DL5o+WLrtX8YCDBR2tbgSQQoY48q7/Htjcm73HKmJf3hmgyKlUUd7NMcJRgQCLVDWhkVpdZB7ghkq4PffGG0jia1TUyqNJbKwmw==</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
+<h1>Справочник для личного использования</h1>
+<p>Содержимое доступно только по паролю</p>
+<input class="md-input" id="mkdocs-content-password" placeholder="Пароль" type="password"/>
+<button class="md-button md-button--primary" id="mkdocs-decrypt-button">Войти</button>
+<p id="mkdocs-decrypt-msg"></p>
+</form>
+</div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "spravochnik-site/endokrinologiya/endokrinologiya-nadpochechnikovaya-nedostatochnost/";
+var decryption_failure_message = "\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043f\u0430\u0440\u043e\u043b\u044c";
+var encryptcontent_keystore = ["1rz2EmDGe/BXeOQNdj7DiQ==;jz5s/mQXUQnG2HMrenK/7wywharwbTNUs025bHLGvbEAb/6HXw7sZbTd2NSpK8G64M8A7dzbwFcq+ZzmDkfozcBWGs40faXwJMO8JFKWXI+tf8CSI0GobgoMusWHJ9eJ;1zTC3SGeGa3tQlLu5kjFow=="];
+var encryptcontent_obfuscate = 0;
+
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
+}
+</script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>
