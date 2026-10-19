@@ -181,6 +181,29 @@
   background: var(--sp-terra); color: #fff; font: 700 .7em/1.1em Montserrat, sans-serif; text-align: center; vertical-align: .25em;
 }
 
+/* выделения в тексте карточек: пороги, дозы, ключевые термины */
+.md-typeset p strong, .md-typeset td strong { color: var(--sp-plum); font-weight: 700; }
+.md-typeset em { color: var(--md-default-fg-color--light); }
+
+/* выноски: неотложно / важно / заметка — в фирменных тонах */
+.md-typeset .admonition, .md-typeset details {
+  border: none; border-left: 4px solid var(--sp-plum-2); border-radius: 0 12px 12px 0;
+  background: var(--sp-zebra); box-shadow: none; font-size: .92em; margin: 1.1em 0;
+}
+.md-typeset .admonition-title, .md-typeset summary {
+  background: transparent !important; font-weight: 700; color: var(--sp-plum); padding-left: 2.4em;
+}
+.md-typeset .admonition-title::before, .md-typeset summary::before { left: .8em; }
+.md-typeset .admonition.danger { border-left-color: #b23b3b; background: rgba(178, 59, 59, .06); }
+.md-typeset .admonition.danger > .admonition-title { color: #a33232; }
+.md-typeset .admonition.danger > .admonition-title::before { background-color: #b23b3b; }
+.md-typeset .admonition.warning { border-left-color: var(--sp-terra); background: var(--sp-terra-soft); }
+.md-typeset .admonition.warning > .admonition-title { color: var(--sp-terra); }
+.md-typeset .admonition.warning > .admonition-title::before { background-color: var(--sp-terra); }
+.md-typeset .admonition.note > .admonition-title::before, .md-typeset .admonition.tip > .admonition-title::before { background-color: var(--sp-plum-2); }
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger { background: rgba(220, 90, 90, .1); }
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger > .admonition-title { color: #ec8c8c; }
+
 /* сведения о карточке */
 .md-typeset .sp-meta {
   margin-top: 2.2em; padding: 1em 1.2em; border-radius: var(--sp-radius); background: var(--sp-zebra);
