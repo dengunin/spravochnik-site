@@ -5,7 +5,7 @@ document.addEventListener("input", function (e) {
   var words = input.value.toLowerCase().replace(/ё/g, "е").split(/\s+/).filter(Boolean);
   var root = input.closest(".md-typeset") || document;
   var shown = 0;
-  root.querySelectorAll(".sp-row").forEach(function (row) {
+  root.querySelectorAll("[data-k]").forEach(function (row) {
     var key = (row.getAttribute("data-k") || "").replace(/ё/g, "е");
     var ok = words.every(function (w) { return key.indexOf(w) !== -1; });
     row.style.display = ok ? "" : "none";

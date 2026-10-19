@@ -217,6 +217,11 @@
   display: inline-block; margin: 0 .3em .3em 0; padding: .05em .7em; border-radius: 999px;
   background: var(--sp-card); border: 1px solid var(--sp-line); color: var(--md-default-fg-color--light); font-size: .92em;
 }
+.md-typeset a.sp-chip { text-decoration: none; transition: border-color .15s, color .15s, background .15s; }
+.md-typeset a.sp-chip:hover { border-color: var(--sp-terra); color: var(--sp-terra); background: var(--sp-terra-soft); }
+.md-typeset .sp-tags { margin: .4em 0 1em; }
+.md-typeset .sp-tag__n { margin-left: .25em; font-size: .8em; opacity: .65; }
+.md-typeset .sp-sub a { margin-left: auto; }
 .md-typeset a.sp-pill {
   display: inline-block; margin: 0 .35em .35em 0; padding: .2em .8em; border-radius: 999px;
   background: var(--sp-terra-soft); color: var(--sp-terra); font-weight: 600; text-decoration: none;
