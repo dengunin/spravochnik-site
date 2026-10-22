@@ -1,0 +1,742 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://dengunin.github.io/spravochnik-site/dietologiya/tema-diabet-i-obmen-veshchestv/" rel="canonical"/>
+<link href="../dietologiya-dislipidemiya-dieta/" rel="prev"/>
+<link href="../dietologiya-gsd-dieta/" rel="next"/>
+<link href="../../assets/brand/favicon.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Диабет и обмен веществ - Справочник терапевта</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Montserrat";--md-code-font:"JetBrains Mono"}</style>
+<link href="../../assets/stylesheets/spravochnik.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="noindex, nofollow" name="robots"/>
+<script>
+  /* Поиск по зашифрованным страницам: encryptcontent (search_index: dynamically) кладёт текст страниц
+     в search/encrypted_search_index.json, зашифрованный ключом страницы. Перехватываем загрузку индекса
+     темой Material (XMLHttpRequest) и добавляем в него расшифрованные записи, когда ключ уже есть в sessionStorage. */
+  (function () {
+    var ecDone = false, builtWithoutKeys = false, ecIds = [];
+    function hasKeys(ids) { return ids.length > 0 && ids.every(function (id) { return sessionStorage.getItem(id); }); }
+    window.addEventListener("encryptcontent_event", function () {
+      ecDone = true;
+      if (builtWithoutKeys && hasKeys(ecIds)) location.reload();
+    });
+    function waitDecrypt() {
+      return new Promise(function (res) {
+        if (ecDone) return res();
+        window.addEventListener("encryptcontent_event", function () { res(); }, { once: true });
+        setTimeout(res, 8000);
+      });
+    }
+    function hex(h) { return new Uint8Array(h.match(/../g).map(function (b) { return parseInt(b, 16); })); }
+    function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+    async function decrypt(keyHex, bundle) {
+      var p = bundle.split(";");
+      var key = await crypto.subtle.importKey("raw", hex(keyHex), "AES-CBC", false, ["decrypt"]);
+      var plain = await crypto.subtle.decrypt({ name: "AES-CBC", iv: b64(p[0]) }, key, b64(p[1]));
+      return JSON.parse(new TextDecoder().decode(plain));
+    }
+    async function buildIndex(url) {
+      var index = await (await fetch(url)).json();
+      try {
+        var enc = await (await fetch(url.replace("search_index.json", "encrypted_search_index.json"))).json();
+        ecIds = Object.keys(enc);
+        if (!hasKeys(ecIds)) await waitDecrypt();
+        var added = 0;
+        for (var i = 0; i < ecIds.length; i++) {
+          var k = sessionStorage.getItem(ecIds[i]);
+          if (!k) continue;
+          try { index.docs.push.apply(index.docs, await decrypt(k, enc[ecIds[i]])); added++; } catch (e) {}
+        }
+        builtWithoutKeys = ecIds.length > 0 && added === 0;
+      } catch (e) {}
+      return JSON.stringify(index);
+    }
+    var xOpen = XMLHttpRequest.prototype.open, xSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.open = function (method, url) {
+      this.__ecUrl = /search\/search_index\.json(\?|$)/.test(String(url)) ? new URL(url, location.href).href : null;
+      return xOpen.apply(this, arguments);
+    };
+    XMLHttpRequest.prototype.send = function () {
+      var x = this, url = x.__ecUrl;
+      if (!url) return xSend.apply(x, arguments);
+      var rt = x.responseType;
+      function go(target) { xOpen.call(x, "GET", target); x.responseType = rt; xSend.call(x); }
+      buildIndex(url).then(function (json) {
+        go(URL.createObjectURL(new Blob([json], { type: "application/json" })));
+      }, function () { go(url); });
+    };
+  })();
+  </script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="Справочник терапевта" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<img alt="logo" src="../../assets/brand/mark-light.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Справочник терапевта
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Диабет и обмен веществ
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Вкладки" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
+          
+  
+  
+    
+  
+  Диетология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pulmonologiya/">
+          
+  
+  
+    
+  
+  Пульмонология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../urologiya/">
+          
+  
+  
+    
+  
+  Урология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../kirurgiya/">
+          
+  
+  
+    
+  
+  Хирургия
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../endokrinologiya/">
+          
+  
+  
+    
+  
+  Эндокринология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tegi/">
+        
+  
+  
+    
+  
+  Теги
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Справочник терапевта" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<img alt="logo" src="../../assets/brand/mark-light.svg"/>
+</a>
+    Справочник терапевта
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Диетология
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Диетология
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-nutritivnyi-status-i-skrining/">
+<span class="md-ellipsis">
+    
+  
+    Нутритивный статус и скрининг
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-defitsity-vitaminov-i-mikroelementov/">
+<span class="md-ellipsis">
+    
+  
+    Дефициты витаминов и микроэлементов
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-beremennost-i-laktatsiya/">
+<span class="md-ellipsis">
+    
+  
+    Беременность и лактация
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-pishchevaya-allergiya-i-neperenosimost/">
+<span class="md-ellipsis">
+    
+  
+    Пищевая аллергия и непереносимость
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-zhkt-i-pechen/">
+<span class="md-ellipsis">
+    
+  
+    ЖКТ и печень
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-serdechno-sosudistaya-sistema/">
+<span class="md-ellipsis">
+    
+  
+    Сердечно-сосудистая система
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Диабет и обмен веществ
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+<label class="md-nav__link md-nav__link--active" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Диабет и обмен веществ
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dietologiya-gsd-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Гестационный сахарный диабет: диета и физическая нагрузка
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dietologiya-gsd-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Гестационный сахарный диабет: патогенез и диагностика (ПГТТ)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dietologiya-nizkii-glikemicheskii-indeks/">
+<span class="md-ellipsis">
+    
+  
+    Диета с низким гликемическим индексом: ГИ и гликемическая нагрузка
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dietologiya-insulinorezistentnost/">
+<span class="md-ellipsis">
+    
+  
+    Инсулинорезистентность: диета
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dietologiya-podagra-vrachu/">
+<span class="md-ellipsis">
+    
+  
+    Подагра: диета и ведение (для врача, BSR 2017, КР 2025)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dietologiya-podagra-patsientu/">
+<span class="md-ellipsis">
+    
+  
+    Подагра: низкопуриновая диета (рекомендации для пациентов)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dietologiya-sd2-makronutrienty/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет 2 типа: макронутриенты, сахарозаменители, активность, медикаментозное снижение веса
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dietologiya-sd2-dieta/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет 2 типа: снижение веса и выбор диеты
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-pochki-i-mochevyvodyashchie-puti/">
+<span class="md-ellipsis">
+    
+  
+    Почки и мочевыводящие пути
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-sistemy-pitaniya-i-diety/">
+<span class="md-ellipsis">
+    
+  
+    Системы питания и диеты
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-konsultirovanie-i-pishchevoe-povedenie/">
+<span class="md-ellipsis">
+    
+  
+    Консультирование и пищевое поведение
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../pulmonologiya/">
+<span class="md-ellipsis">
+    
+  
+    Пульмонология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../urologiya/">
+<span class="md-ellipsis">
+    
+  
+    Урология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../kirurgiya/">
+<span class="md-ellipsis">
+    
+  
+    Хирургия
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../endokrinologiya/">
+<span class="md-ellipsis">
+    
+  
+    Эндокринология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tegi/">
+<span class="md-ellipsis">
+    
+  
+    Теги
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary" style="display:none !important">LD93vn3XPRpcbEW7B2G1CQ==;+lUMltH3jf0RMQpMk8Lybw==</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Навигация" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../..">
+<span class="md-ellipsis">
+    Главная
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../">
+<span class="md-ellipsis">
+    Диетология
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Диабет и обмен веществ
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<div id="mkdocs-encrypted-content" style="display:none">5Bv6B/QLk41kYaip8ac1Cg==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
+<h1>Справочник для личного использования</h1>
+<p>Содержимое доступно только по паролю</p>
+<input class="md-input" id="mkdocs-content-password" placeholder="Пароль" type="password"/>
+<button class="md-button md-button--primary" id="mkdocs-decrypt-button">Войти</button>
+<p id="mkdocs-decrypt-msg"></p>
+</form>
+</div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "spravochnik-site/dietologiya/tema-diabet-i-obmen-veshchestv/";
+var decryption_failure_message = "\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043f\u0430\u0440\u043e\u043b\u044c";
+var encryptcontent_keystore = ["8s5ZJBODavfigz4w7uAD8A==;qFszg/+29YQrlDk3wrIVyBqtJ0VbK6jHpwVXeNkRPL0gI7dCTIADZPCVZGFTJo5xZF1FGw4CVU18aVXTLOsBVERjJUUCzpQu12hewenic2HWOl/uoxMEMSdWvExJ9FZb;11nyFG956mTsr+AbiareZQ=="];
+var encryptcontent_obfuscate = 0;
+
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
+}
+</script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Диета при дислипидемии" class="md-footer__link md-footer__link--prev" href="../dietologiya-dislipidemiya-dieta/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Диета при дислипидемии
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Гестационный сахарный диабет: диета и физическая нагрузка" class="md-footer__link md-footer__link--next" href="../dietologiya-gsd-dieta/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Гестационный сахарный диабет: диета и физическая нагрузка
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Справочник для личного использования · врач Анастасия Гунина
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.path", "navigation.prune", "navigation.footer", "navigation.top", "search.highlight", "search.suggest", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../../assets/javascripts/nav-data.js"></script>
+<script src="../../assets/javascripts/spravochnik.js"></script>
+</body>
+</html>

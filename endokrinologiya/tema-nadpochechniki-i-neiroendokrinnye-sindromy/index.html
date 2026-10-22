@@ -1,0 +1,872 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://dengunin.github.io/spravochnik-site/endokrinologiya/tema-nadpochechniki-i-neiroendokrinnye-sindromy/" rel="canonical"/>
+<link href="../endokrinologiya-eop-lechenie/" rel="prev"/>
+<link href="../endokrinologiya-addisonicheskii-kriz/" rel="next"/>
+<link href="../../assets/brand/favicon.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Надпочечники и нейроэндокринные синдромы - Справочник терапевта</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Montserrat";--md-code-font:"JetBrains Mono"}</style>
+<link href="../../assets/stylesheets/spravochnik.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="noindex, nofollow" name="robots"/>
+<script>
+  /* Поиск по зашифрованным страницам: encryptcontent (search_index: dynamically) кладёт текст страниц
+     в search/encrypted_search_index.json, зашифрованный ключом страницы. Перехватываем загрузку индекса
+     темой Material (XMLHttpRequest) и добавляем в него расшифрованные записи, когда ключ уже есть в sessionStorage. */
+  (function () {
+    var ecDone = false, builtWithoutKeys = false, ecIds = [];
+    function hasKeys(ids) { return ids.length > 0 && ids.every(function (id) { return sessionStorage.getItem(id); }); }
+    window.addEventListener("encryptcontent_event", function () {
+      ecDone = true;
+      if (builtWithoutKeys && hasKeys(ecIds)) location.reload();
+    });
+    function waitDecrypt() {
+      return new Promise(function (res) {
+        if (ecDone) return res();
+        window.addEventListener("encryptcontent_event", function () { res(); }, { once: true });
+        setTimeout(res, 8000);
+      });
+    }
+    function hex(h) { return new Uint8Array(h.match(/../g).map(function (b) { return parseInt(b, 16); })); }
+    function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+    async function decrypt(keyHex, bundle) {
+      var p = bundle.split(";");
+      var key = await crypto.subtle.importKey("raw", hex(keyHex), "AES-CBC", false, ["decrypt"]);
+      var plain = await crypto.subtle.decrypt({ name: "AES-CBC", iv: b64(p[0]) }, key, b64(p[1]));
+      return JSON.parse(new TextDecoder().decode(plain));
+    }
+    async function buildIndex(url) {
+      var index = await (await fetch(url)).json();
+      try {
+        var enc = await (await fetch(url.replace("search_index.json", "encrypted_search_index.json"))).json();
+        ecIds = Object.keys(enc);
+        if (!hasKeys(ecIds)) await waitDecrypt();
+        var added = 0;
+        for (var i = 0; i < ecIds.length; i++) {
+          var k = sessionStorage.getItem(ecIds[i]);
+          if (!k) continue;
+          try { index.docs.push.apply(index.docs, await decrypt(k, enc[ecIds[i]])); added++; } catch (e) {}
+        }
+        builtWithoutKeys = ecIds.length > 0 && added === 0;
+      } catch (e) {}
+      return JSON.stringify(index);
+    }
+    var xOpen = XMLHttpRequest.prototype.open, xSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.open = function (method, url) {
+      this.__ecUrl = /search\/search_index\.json(\?|$)/.test(String(url)) ? new URL(url, location.href).href : null;
+      return xOpen.apply(this, arguments);
+    };
+    XMLHttpRequest.prototype.send = function () {
+      var x = this, url = x.__ecUrl;
+      if (!url) return xSend.apply(x, arguments);
+      var rt = x.responseType;
+      function go(target) { xOpen.call(x, "GET", target); x.responseType = rt; xSend.call(x); }
+      buildIndex(url).then(function (json) {
+        go(URL.createObjectURL(new Blob([json], { type: "application/json" })));
+      }, function () { go(url); });
+    };
+  })();
+  </script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="Справочник терапевта" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<img alt="logo" src="../../assets/brand/mark-light.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Справочник терапевта
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Надпочечники и нейроэндокринные синдромы
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Вкладки" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dietologiya/">
+          
+  
+  
+    
+  
+  Диетология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pulmonologiya/">
+          
+  
+  
+    
+  
+  Пульмонология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../urologiya/">
+          
+  
+  
+    
+  
+  Урология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../kirurgiya/">
+          
+  
+  
+    
+  
+  Хирургия
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
+          
+  
+  
+    
+  
+  Эндокринология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tegi/">
+        
+  
+  
+    
+  
+  Теги
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Справочник терапевта" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<img alt="logo" src="../../assets/brand/mark-light.svg"/>
+</a>
+    Справочник терапевта
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../dietologiya/">
+<span class="md-ellipsis">
+    
+  
+    Диетология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../pulmonologiya/">
+<span class="md-ellipsis">
+    
+  
+    Пульмонология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../urologiya/">
+<span class="md-ellipsis">
+    
+  
+    Урология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../kirurgiya/">
+<span class="md-ellipsis">
+    
+  
+    Хирургия
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Эндокринология
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Эндокринология
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-beremennost-i-endokrinnye-zabolevaniya/">
+<span class="md-ellipsis">
+    
+  
+    Беременность и эндокринные заболевания
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-sakharnyi-diabet-i-ego-oslozhneniya/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет и его осложнения
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-shchitovidnaya-zheleza/">
+<span class="md-ellipsis">
+    
+  
+    Щитовидная железа
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Надпочечники и нейроэндокринные синдромы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+<label class="md-nav__link md-nav__link--active" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Надпочечники и нейроэндокринные синдромы
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-addisonicheskii-kriz/">
+<span class="md-ellipsis">
+    
+  
+    Аддисонический криз (острая надпочечниковая недостаточность): что делать
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-adrenokortikalnyi-rak-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Адренокортикальный рак кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-adrenokortikalnyi-rak/">
+<span class="md-ellipsis">
+    
+  
+    Адренокортикальный рак: диагностика и тактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vdkn/">
+<span class="md-ellipsis">
+    
+  
+    ВДКН: формы, диагностика, оценка терапии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-vdkn-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Врождённая дисфункция коры надпочечников кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkortitsizm-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм (синдром Кушинга) кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkortitsizm-klinika/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм: классификация, клиника, кого скринировать
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkortitsizm-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм: лабораторная диагностика и определение уровня поражения
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-giperkortitsizm-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Гиперкортицизм: лечение и коррекция осложнений
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-intsidentaloma-nadpochechnika-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Инциденталома надпочечника кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-intsidentaloma-nadpochechnika/">
+<span class="md-ellipsis">
+    
+  
+    Инциденталома надпочечника: гормональный скрининг, КТ-фенотип, наблюдение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-nadpochechnikovaya-nedostatochnost-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Надпочечниковая недостаточность кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-nadpochechnikovaya-nedostatochnost-klinika/">
+<span class="md-ellipsis">
+    
+  
+    Надпочечниковая недостаточность: виды, причины, клиника первичной и вторичной
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-nadpochechnikovaya-nedostatochnost/">
+<span class="md-ellipsis">
+    
+  
+    Надпочечниковая недостаточность: диагностика, заместительная терапия, стресс-дозы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-pga-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Первичный гиперальдостеронизм кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-pga/">
+<span class="md-ellipsis">
+    
+  
+    Первичный гиперальдостеронизм: кого скринировать, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-men-1/">
+<span class="md-ellipsis">
+    
+  
+    Синдром множественной эндокринной неоплазии 1 типа (МЭН 1)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-men-2/">
+<span class="md-ellipsis">
+    
+  
+    Синдром множественной эндокринной неоплазии 2 типа (МЭН 2А, 2В)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-feokhromotsitoma-kratko/">
+<span class="md-ellipsis">
+    
+  
+    Феохромоцитома/параганглиома кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-feokhromotsitoma/">
+<span class="md-ellipsis">
+    
+  
+    Феохромоцитома: показания к диагностике, топическая диагностика, предоперационное ведение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-gipofiz/">
+<span class="md-ellipsis">
+    
+  
+    Гипофиз
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-kaltsievyi-obmen-kosti-i-vitamin-d/">
+<span class="md-ellipsis">
+    
+  
+    Кальциевый обмен, кости и витамин D
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-polovye-gormony-i-menopauza/">
+<span class="md-ellipsis">
+    
+  
+    Половые гормоны и менопауза
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-ozhirenie-i-massa-tela/">
+<span class="md-ellipsis">
+    
+  
+    Ожирение и масса тела
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tegi/">
+<span class="md-ellipsis">
+    
+  
+    Теги
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary" style="display:none !important">Ug2xpWid8XotonGl+3rEQg==;UpmQ5EqklPN9XguqB/KsXw==</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Навигация" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../..">
+<span class="md-ellipsis">
+    Главная
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../">
+<span class="md-ellipsis">
+    Эндокринология
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Надпочечники и нейроэндокринные синдромы
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<div id="mkdocs-encrypted-content" style="display:none">6pH1px/L8aMwwZLD7hbMNA==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
+<h1>Справочник для личного использования</h1>
+<p>Содержимое доступно только по паролю</p>
+<input class="md-input" id="mkdocs-content-password" placeholder="Пароль" type="password"/>
+<button class="md-button md-button--primary" id="mkdocs-decrypt-button">Войти</button>
+<p id="mkdocs-decrypt-msg"></p>
+</form>
+</div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "spravochnik-site/endokrinologiya/tema-nadpochechniki-i-neiroendokrinnye-sindromy/";
+var decryption_failure_message = "\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043f\u0430\u0440\u043e\u043b\u044c";
+var encryptcontent_keystore = ["8s5ZJBODavfigz4w7uAD8A==;qFszg/+29YQrlDk3wrIVyBqtJ0VbK6jHpwVXeNkRPL0gI7dCTIADZPCVZGFTJo5xZF1FGw4CVU18aVXTLOsBVERjJUUCzpQu12hewenic2HWOl/uoxMEMSdWvExJ9FZb;11nyFG956mTsr+AbiareZQ=="];
+var encryptcontent_obfuscate = 0;
+
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
+}
+</script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Эндокринная офтальмопатия: оценка активности и лечение по тяжести" class="md-footer__link md-footer__link--prev" href="../endokrinologiya-eop-lechenie/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Эндокринная офтальмопатия: оценка активности и лечение по тяжести
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Аддисонический криз (острая надпочечниковая недостаточность): что делать" class="md-footer__link md-footer__link--next" href="../endokrinologiya-addisonicheskii-kriz/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Аддисонический криз (острая надпочечниковая недостаточность): что делать
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Справочник для личного использования · врач Анастасия Гунина
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.path", "navigation.prune", "navigation.footer", "navigation.top", "search.highlight", "search.suggest", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../../assets/javascripts/nav-data.js"></script>
+<script src="../../assets/javascripts/spravochnik.js"></script>
+</body>
+</html>

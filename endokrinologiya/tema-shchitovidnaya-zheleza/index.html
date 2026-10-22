@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://dengunin.github.io/spravochnik-site/endokrinologiya/tema-shchitovidnaya-zheleza/" rel="canonical"/>
+<link href="../endokrinologiya-sds-diagnostika-lechenie/" rel="prev"/>
+<link href="../endokrinologiya-amiodaron-tireopatii/" rel="next"/>
+<link href="../../assets/brand/favicon.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Щитовидная железа - Справочник терапевта</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Montserrat";--md-code-font:"JetBrains Mono"}</style>
+<link href="../../assets/stylesheets/spravochnik.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="noindex, nofollow" name="robots"/>
+<script>
+  /* Поиск по зашифрованным страницам: encryptcontent (search_index: dynamically) кладёт текст страниц
+     в search/encrypted_search_index.json, зашифрованный ключом страницы. Перехватываем загрузку индекса
+     темой Material (XMLHttpRequest) и добавляем в него расшифрованные записи, когда ключ уже есть в sessionStorage. */
+  (function () {
+    var ecDone = false, builtWithoutKeys = false, ecIds = [];
+    function hasKeys(ids) { return ids.length > 0 && ids.every(function (id) { return sessionStorage.getItem(id); }); }
+    window.addEventListener("encryptcontent_event", function () {
+      ecDone = true;
+      if (builtWithoutKeys && hasKeys(ecIds)) location.reload();
+    });
+    function waitDecrypt() {
+      return new Promise(function (res) {
+        if (ecDone) return res();
+        window.addEventListener("encryptcontent_event", function () { res(); }, { once: true });
+        setTimeout(res, 8000);
+      });
+    }
+    function hex(h) { return new Uint8Array(h.match(/../g).map(function (b) { return parseInt(b, 16); })); }
+    function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+    async function decrypt(keyHex, bundle) {
+      var p = bundle.split(";");
+      var key = await crypto.subtle.importKey("raw", hex(keyHex), "AES-CBC", false, ["decrypt"]);
+      var plain = await crypto.subtle.decrypt({ name: "AES-CBC", iv: b64(p[0]) }, key, b64(p[1]));
+      return JSON.parse(new TextDecoder().decode(plain));
+    }
+    async function buildIndex(url) {
+      var index = await (await fetch(url)).json();
+      try {
+        var enc = await (await fetch(url.replace("search_index.json", "encrypted_search_index.json"))).json();
+        ecIds = Object.keys(enc);
+        if (!hasKeys(ecIds)) await waitDecrypt();
+        var added = 0;
+        for (var i = 0; i < ecIds.length; i++) {
+          var k = sessionStorage.getItem(ecIds[i]);
+          if (!k) continue;
+          try { index.docs.push.apply(index.docs, await decrypt(k, enc[ecIds[i]])); added++; } catch (e) {}
+        }
+        builtWithoutKeys = ecIds.length > 0 && added === 0;
+      } catch (e) {}
+      return JSON.stringify(index);
+    }
+    var xOpen = XMLHttpRequest.prototype.open, xSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.open = function (method, url) {
+      this.__ecUrl = /search\/search_index\.json(\?|$)/.test(String(url)) ? new URL(url, location.href).href : null;
+      return xOpen.apply(this, arguments);
+    };
+    XMLHttpRequest.prototype.send = function () {
+      var x = this, url = x.__ecUrl;
+      if (!url) return xSend.apply(x, arguments);
+      var rt = x.responseType;
+      function go(target) { xOpen.call(x, "GET", target); x.responseType = rt; xSend.call(x); }
+      buildIndex(url).then(function (json) {
+        go(URL.createObjectURL(new Blob([json], { type: "application/json" })));
+      }, function () { go(url); });
+    };
+  })();
+  </script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="Справочник терапевта" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<img alt="logo" src="../../assets/brand/mark-light.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Справочник терапевта
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Щитовидная железа
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Вкладки" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dietologiya/">
+          
+  
+  
+    
+  
+  Диетология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pulmonologiya/">
+          
+  
+  
+    
+  
+  Пульмонология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../urologiya/">
+          
+  
+  
+    
+  
+  Урология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../kirurgiya/">
+          
+  
+  
+    
+  
+  Хирургия
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
+          
+  
+  
+    
+  
+  Эндокринология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tegi/">
+        
+  
+  
+    
+  
+  Теги
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Справочник терапевта" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<img alt="logo" src="../../assets/brand/mark-light.svg"/>
+</a>
+    Справочник терапевта
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../dietologiya/">
+<span class="md-ellipsis">
+    
+  
+    Диетология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../pulmonologiya/">
+<span class="md-ellipsis">
+    
+  
+    Пульмонология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../urologiya/">
+<span class="md-ellipsis">
+    
+  
+    Урология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../kirurgiya/">
+<span class="md-ellipsis">
+    
+  
+    Хирургия
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Эндокринология
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Эндокринология
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-beremennost-i-endokrinnye-zabolevaniya/">
+<span class="md-ellipsis">
+    
+  
+    Беременность и эндокринные заболевания
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-sakharnyi-diabet-i-ego-oslozhneniya/">
+<span class="md-ellipsis">
+    
+  
+    Сахарный диабет и его осложнения
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Щитовидная железа
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+<label class="md-nav__link md-nav__link--active" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_6_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Щитовидная железа
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-amiodaron-tireopatii/">
+<span class="md-ellipsis">
+    
+  
+    Амиодарон-индуцированные тиреопатии
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-anaplasticheskii-rak-shchitovidnoi/">
+<span class="md-ellipsis">
+    
+  
+    Анапластический рак щитовидной железы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-autoimmunnyi-tireoidit/">
+<span class="md-ellipsis">
+    
+  
+    Аутоиммунный тиреоидит: диагностика и тактика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-gipotireoz/">
+<span class="md-ellipsis">
+    
+  
+    Гипотиреоз: скрининг, диагностика, лечение левотироксином
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-dtz/">
+<span class="md-ellipsis">
+    
+  
+    Диффузный токсический зоб (болезнь Грейвса)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-meduyarnyi-rak-shchitovidnoi/">
+<span class="md-ellipsis">
+    
+  
+    Медуллярный рак щитовидной железы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-rak-shchitovidnoi-differentsirovannyi/">
+<span class="md-ellipsis">
+    
+  
+    Папиллярный и фолликулярный рак щитовидной железы
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-podostryi-tireoidit/">
+<span class="md-ellipsis">
+    
+  
+    Подострый тиреоидит (де Кервена)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-poslerodovoi-tireoidit/">
+<span class="md-ellipsis">
+    
+  
+    Послеродовой тиреоидит
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-tireotoksikoz-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Тиреотоксикоз: дифференциальная диагностика (сцинтиграфия) и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-tireotoksikoz/">
+<span class="md-ellipsis">
+    
+  
+    Тиреотоксикоз: причины и диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-uzlovoi-zob/">
+<span class="md-ellipsis">
+    
+  
+    Узловой зоб: обследование, EU-TIRADS, Бетесда, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-funktsionalnaya-avtonomiya/">
+<span class="md-ellipsis">
+    
+  
+    Функциональная автономия щитовидной железы (токсическая аденома, МУТЗ)
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-endokrinnaya-oftalmopatiya/">
+<span class="md-ellipsis">
+    
+  
+    Эндокринная офтальмопатия: кратко
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endokrinologiya-eop-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Эндокринная офтальмопатия: оценка активности и лечение по тяжести
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-nadpochechniki-i-neiroendokrinnye-sindromy/">
+<span class="md-ellipsis">
+    
+  
+    Надпочечники и нейроэндокринные синдромы
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-gipofiz/">
+<span class="md-ellipsis">
+    
+  
+    Гипофиз
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-kaltsievyi-obmen-kosti-i-vitamin-d/">
+<span class="md-ellipsis">
+    
+  
+    Кальциевый обмен, кости и витамин D
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-polovye-gormony-i-menopauza/">
+<span class="md-ellipsis">
+    
+  
+    Половые гормоны и менопауза
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-ozhirenie-i-massa-tela/">
+<span class="md-ellipsis">
+    
+  
+    Ожирение и масса тела
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tegi/">
+<span class="md-ellipsis">
+    
+  
+    Теги
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary" style="display:none !important">8BTPTxr32EICBtlIQraxiw==;Ef1V3ISeTyX6bYQ3gqzu/g==</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Навигация" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../..">
+<span class="md-ellipsis">
+    Главная
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../">
+<span class="md-ellipsis">
+    Эндокринология
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Щитовидная железа
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<div id="mkdocs-encrypted-content" style="display:none">38fxJAynIfB0Bs8pd8VyHw==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
+<h1>Справочник для личного использования</h1>
+<p>Содержимое доступно только по паролю</p>
+<input class="md-input" id="mkdocs-content-password" placeholder="Пароль" type="password"/>
+<button class="md-button md-button--primary" id="mkdocs-decrypt-button">Войти</button>
+<p id="mkdocs-decrypt-msg"></p>
+</form>
+</div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "spravochnik-site/endokrinologiya/tema-shchitovidnaya-zheleza/";
+var decryption_failure_message = "\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043f\u0430\u0440\u043e\u043b\u044c";
+var encryptcontent_keystore = ["8s5ZJBODavfigz4w7uAD8A==;qFszg/+29YQrlDk3wrIVyBqtJ0VbK6jHpwVXeNkRPL0gI7dCTIADZPCVZGFTJo5xZF1FGw4CVU18aVXTLOsBVERjJUUCzpQu12hewenic2HWOl/uoxMEMSdWvExJ9FZb;11nyFG956mTsr+AbiareZQ=="];
+var encryptcontent_obfuscate = 0;
+
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
+}
+</script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Синдром диабетической стопы: формы, диагностика, лечение" class="md-footer__link md-footer__link--prev" href="../endokrinologiya-sds-diagnostika-lechenie/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Синдром диабетической стопы: формы, диагностика, лечение
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Амиодарон-индуцированные тиреопатии" class="md-footer__link md-footer__link--next" href="../endokrinologiya-amiodaron-tireopatii/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Амиодарон-индуцированные тиреопатии
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Справочник для личного использования · врач Анастасия Гунина
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.path", "navigation.prune", "navigation.footer", "navigation.top", "search.highlight", "search.suggest", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../../assets/javascripts/nav-data.js"></script>
+<script src="../../assets/javascripts/spravochnik.js"></script>
+</body>
+</html>

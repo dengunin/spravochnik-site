@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://dengunin.github.io/spravochnik-site/kirurgiya/tema-sustavy-i-myagkie-tkani/" rel="canonical"/>
+<link href="../khirurgiya-troficheskaya-yazva/" rel="prev"/>
+<link href="../khirurgiya-prp-terapiya/" rel="next"/>
+<link href="../../assets/brand/favicon.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Суставы и мягкие ткани - Справочник терапевта</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Montserrat";--md-code-font:"JetBrains Mono"}</style>
+<link href="../../assets/stylesheets/spravochnik.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="noindex, nofollow" name="robots"/>
+<script>
+  /* Поиск по зашифрованным страницам: encryptcontent (search_index: dynamically) кладёт текст страниц
+     в search/encrypted_search_index.json, зашифрованный ключом страницы. Перехватываем загрузку индекса
+     темой Material (XMLHttpRequest) и добавляем в него расшифрованные записи, когда ключ уже есть в sessionStorage. */
+  (function () {
+    var ecDone = false, builtWithoutKeys = false, ecIds = [];
+    function hasKeys(ids) { return ids.length > 0 && ids.every(function (id) { return sessionStorage.getItem(id); }); }
+    window.addEventListener("encryptcontent_event", function () {
+      ecDone = true;
+      if (builtWithoutKeys && hasKeys(ecIds)) location.reload();
+    });
+    function waitDecrypt() {
+      return new Promise(function (res) {
+        if (ecDone) return res();
+        window.addEventListener("encryptcontent_event", function () { res(); }, { once: true });
+        setTimeout(res, 8000);
+      });
+    }
+    function hex(h) { return new Uint8Array(h.match(/../g).map(function (b) { return parseInt(b, 16); })); }
+    function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+    async function decrypt(keyHex, bundle) {
+      var p = bundle.split(";");
+      var key = await crypto.subtle.importKey("raw", hex(keyHex), "AES-CBC", false, ["decrypt"]);
+      var plain = await crypto.subtle.decrypt({ name: "AES-CBC", iv: b64(p[0]) }, key, b64(p[1]));
+      return JSON.parse(new TextDecoder().decode(plain));
+    }
+    async function buildIndex(url) {
+      var index = await (await fetch(url)).json();
+      try {
+        var enc = await (await fetch(url.replace("search_index.json", "encrypted_search_index.json"))).json();
+        ecIds = Object.keys(enc);
+        if (!hasKeys(ecIds)) await waitDecrypt();
+        var added = 0;
+        for (var i = 0; i < ecIds.length; i++) {
+          var k = sessionStorage.getItem(ecIds[i]);
+          if (!k) continue;
+          try { index.docs.push.apply(index.docs, await decrypt(k, enc[ecIds[i]])); added++; } catch (e) {}
+        }
+        builtWithoutKeys = ecIds.length > 0 && added === 0;
+      } catch (e) {}
+      return JSON.stringify(index);
+    }
+    var xOpen = XMLHttpRequest.prototype.open, xSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.open = function (method, url) {
+      this.__ecUrl = /search\/search_index\.json(\?|$)/.test(String(url)) ? new URL(url, location.href).href : null;
+      return xOpen.apply(this, arguments);
+    };
+    XMLHttpRequest.prototype.send = function () {
+      var x = this, url = x.__ecUrl;
+      if (!url) return xSend.apply(x, arguments);
+      var rt = x.responseType;
+      function go(target) { xOpen.call(x, "GET", target); x.responseType = rt; xSend.call(x); }
+      buildIndex(url).then(function (json) {
+        go(URL.createObjectURL(new Blob([json], { type: "application/json" })));
+      }, function () { go(url); });
+    };
+  })();
+  </script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="Справочник терапевта" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<img alt="logo" src="../../assets/brand/mark-light.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Справочник терапевта
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Суставы и мягкие ткани
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Вкладки" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dietologiya/">
+          
+  
+  
+    
+  
+  Диетология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pulmonologiya/">
+          
+  
+  
+    
+  
+  Пульмонология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../urologiya/">
+          
+  
+  
+    
+  
+  Урология
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
+          
+  
+  
+    
+  
+  Хирургия
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../endokrinologiya/">
+          
+  
+  
+    
+  
+  Эндокринология
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tegi/">
+        
+  
+  
+    
+  
+  Теги
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Справочник терапевта" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Справочник терапевта">
+<img alt="logo" src="../../assets/brand/mark-light.svg"/>
+</a>
+    Справочник терапевта
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../dietologiya/">
+<span class="md-ellipsis">
+    
+  
+    Диетология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../pulmonologiya/">
+<span class="md-ellipsis">
+    
+  
+    Пульмонология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../urologiya/">
+<span class="md-ellipsis">
+    
+  
+    Урология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Хирургия
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Хирургия
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-gnoinaya-khirurgiya/">
+<span class="md-ellipsis">
+    
+  
+    Гнойная хирургия
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-proktologiya-i-divertikulit/">
+<span class="md-ellipsis">
+    
+  
+    Проктология и дивертикулит
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-venoznye-zabolevaniya/">
+<span class="md-ellipsis">
+    
+  
+    Венозные заболевания
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Суставы и мягкие ткани
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+<label class="md-nav__link md-nav__link--active" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_5_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Суставы и мягкие ткани
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-prp-terapiya/">
+<span class="md-ellipsis">
+    
+  
+    PRP-терапия (плазмолифтинг): доказательность и позиция КР
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-vnutrisustavnye-prp/">
+<span class="md-ellipsis">
+    
+  
+    Внутрисуставное введение PRP при остеоартрите: данные исследований
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-vnutrisustavnye-gialuronovaya-kislota/">
+<span class="md-ellipsis">
+    
+  
+    Внутрисуставные инъекции гиалуроновой кислоты при остеоартрите
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-vnutrisustavnye-gks/">
+<span class="md-ellipsis">
+    
+  
+    Внутрисуставные инъекции глюкокортикоидов при остеоартрите
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-gigroma/">
+<span class="md-ellipsis">
+    
+  
+    Гигрома (ганглион): диагностика и лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-impidzhment-plecha-diagnostika/">
+<span class="md-ellipsis">
+    
+  
+    Импиджмент-синдром и тендинопатия вращательной манжеты плеча: анатомия и клиническая диагностика
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-impidzhment-plecha-lechenie/">
+<span class="md-ellipsis">
+    
+  
+    Импиджмент-синдром плеча: инструментальная диагностика, дифдиагноз, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-poverkhnostnyi-bursit/">
+<span class="md-ellipsis">
+    
+  
+    Поверхностный бурсит: причины, диагностика, лечение
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../khirurgiya-endoprotezirovanie-kolena/">
+<span class="md-ellipsis">
+    
+  
+    Тотальное эндопротезирование коленного сустава: показания, противопоказания, осложнения
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tema-rany-prolezhni-i-fizioterapiya/">
+<span class="md-ellipsis">
+    
+  
+    Раны, пролежни и физиотерапия
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../endokrinologiya/">
+<span class="md-ellipsis">
+    
+  
+    Эндокринология
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tegi/">
+<span class="md-ellipsis">
+    
+  
+    Теги
+  
+
+    
+  </span>
+<span class="md-status md-status--encrypted"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary" style="display:none !important">0prXlR8dbthK6R1+08e2/g==;nkLJfT32oRWtQXySSrxBkQ==</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Навигация" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../..">
+<span class="md-ellipsis">
+    Главная
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../">
+<span class="md-ellipsis">
+    Хирургия
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Суставы и мягкие ткани
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<div id="mkdocs-encrypted-content" style="display:none">nN61WmL9scBcmkLAjggSRg==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
+<h1>Справочник для личного использования</h1>
+<p>Содержимое доступно только по паролю</p>
+<input class="md-input" id="mkdocs-content-password" placeholder="Пароль" type="password"/>
+<button class="md-button md-button--primary" id="mkdocs-decrypt-button">Войти</button>
+<p id="mkdocs-decrypt-msg"></p>
+</form>
+</div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "spravochnik-site/kirurgiya/tema-sustavy-i-myagkie-tkani/";
+var decryption_failure_message = "\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043f\u0430\u0440\u043e\u043b\u044c";
+var encryptcontent_keystore = ["8s5ZJBODavfigz4w7uAD8A==;qFszg/+29YQrlDk3wrIVyBqtJ0VbK6jHpwVXeNkRPL0gI7dCTIADZPCVZGFTJo5xZF1FGw4CVU18aVXTLOsBVERjJUUCzpQu12hewenic2HWOl/uoxMEMSdWvExJ9FZb;11nyFG956mTsr+AbiareZQ=="];
+var encryptcontent_obfuscate = 0;
+
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
+}
+</script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Трофическая язва: красные флаги, этиология, тактика" class="md-footer__link md-footer__link--prev" href="../khirurgiya-troficheskaya-yazva/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Трофическая язва: красные флаги, этиология, тактика
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: PRP-терапия (плазмолифтинг): доказательность и позиция КР" class="md-footer__link md-footer__link--next" href="../khirurgiya-prp-terapiya/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                PRP-терапия (плазмолифтинг): доказательность и позиция КР
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Справочник для личного использования · врач Анастасия Гунина
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.path", "navigation.prune", "navigation.footer", "navigation.top", "search.highlight", "search.suggest", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../../assets/javascripts/nav-data.js"></script>
+<script src="../../assets/javascripts/spravochnik.js"></script>
+</body>
+</html>
