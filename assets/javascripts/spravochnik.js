@@ -14,3 +14,8 @@ document.addEventListener("input", function (e) {
   var empty = root.querySelector(".sp-empty");
   if (empty) empty.style.display = shown ? "none" : "block";
 });
+
+/* Выгрузка в PDF: печать страницы (кнопки появляются после расшифровки, поэтому делегирование). */
+document.addEventListener("click", function (e) {
+  if (e.target.closest && e.target.closest(".sp-print")) window.print();
+});
